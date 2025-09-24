@@ -9,6 +9,13 @@ const nextConfig = {
       },
     ],
   },
+  // Оптимизации для сборки
+  experimental: {
+    workerThreads: false,
+    cpus: 1
+  },
+  // Отключаем некоторые оптимизации для экономии памяти
+  swcMinify: false,
 };
 
 export default nextConfig;
