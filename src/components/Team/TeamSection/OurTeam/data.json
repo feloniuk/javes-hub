@@ -1,0 +1,145 @@
+{
+  "mainTeamMembers": [
+    {
+      "id": "1",
+      "name": "Yevgen",
+      "position": "Founder & CEO",
+      "text": "Pro players can use JVS tokens for self-promotion and ads within the JAVES ecosystem. Top search placement with \u0022ADS\u0022 labels, highlighting effects, shout messages, everything that helps PRO players sell their services, are vital for JAVES monetization.",
+      "image": "/assets/team/main-team/team-1.webp",
+      "hoverImage": "/assets/team/main-team/team-1b.webp",
+      "linkedin": "#"
+    },
+    {
+      "id": "2",
+      "name": "Vitalii",
+      "position": "Founder & CEO",
+      "text": "Pro players can use JVS tokens for self-promotion and ads within the JAVES ecosystem. Top search placement with \u0022ADS\u0022 labels, highlighting effects, shout messages, everything that helps PRO players sell their services, are vital for JAVES monetization.",
+      "image": "/assets/team/main-team/team-2.webp",
+      "hoverImage": "/assets/team/main-team/team-2b.webp",
+      "linkedin": "#"
+    },
+    {
+      "id": "3",
+      "name": "Mike",
+      "position": "Founder & CEO",
+      "text": "Pro players can use JVS tokens for self-promotion and ads within the JAVES ecosystem. Top search placement with \u0022ADS\u0022 labels, highlighting effects, shout messages, everything that helps PRO players sell their services, are vital for JAVES monetization.",
+      "image": "/assets/team/main-team/team-3.webp",
+      "hoverImage": "/assets/team/main-team/team-3b.webp",
+      "linkedin": "#"
+    },
+    {
+      "id": "4",
+      "name": "Miri",
+      "position": "Founder & CEO",
+      "text": "Pro players can use JVS tokens for self-promotion and ads within the JAVES ecosystem. Top search placement with \u0022ADS\u0022 labels, highlighting effects, shout messages, everything that helps PRO players sell their services, are vital for JAVES monetization.",
+      "image": "/assets/team/main-team/team-4.webp",
+      "hoverImage": "/assets/team/main-team/team-4b.webp",
+      "linkedin": "#"
+    },
+    {
+      "id": "5",
+      "name": "Wesper",
+      "position": "Founder & CEO",
+      "text": "Pro players can use JVS tokens for self-promotion and ads within the JAVES ecosystem. Top search placement with \u0022ADS\u0022 labels, highlighting effects, shout messages, everything that helps PRO players sell their services, are vital for JAVES monetization.",
+      "image": "/assets/team/main-team/team-5.webp",
+      "hoverImage": "/assets/team/main-team/team-5b.webp",
+      "linkedin": "#"
+    },
+    {
+      "id": "6",
+      "name": "Glories",
+      "position": "Founder & CEO",
+      "text": "Pro players can use JVS tokens for self-promotion and ads within the JAVES ecosystem. Top search placement with \u0022ADS\u0022 labels, highlighting effects, shout messages, everything that helps PRO players sell their services, are vital for JAVES monetization.",
+      "image": "/assets/team/main-team/team-0.webp",
+      "hoverImage": null,
+      "linkedin": "#"
+    }
+  ],
+
+  "teamMembers": [
+    {
+      "id": "01",
+      "name": "Svyat",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-6.webp",
+      "hoverImage": "/assets/team/team-members/team-6b.webp"
+    },
+    {
+      "id": "02",
+      "name": "Vlad",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-7.webp",
+      "hoverImage": "/assets/team/team-members/team-7b.webp"
+    },
+    {
+      "id": "03",
+      "name": "Anton",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-8.webp",
+      "hoverImage": "/assets/team/team-members/team-8b.webp"
+    },
+    {
+      "id": "04",
+      "name": "Nikita",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-9.webp",
+      "hoverImage": "/assets/team/team-members/team-9b.webp"
+    },
+    {
+      "id": "05",
+      "name": "Max",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-10.webp",
+      "hoverImage": "/assets/team/team-members/team-10b.webp"
+    },
+    {
+      "id": "06",
+      "name": "Alina",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-11.webp",
+      "hoverImage": "/assets/team/team-members/team-11b.webp"
+    },
+    {
+      "id": "07",
+      "name": "Veloti",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-12.webp",
+      "hoverImage": "/assets/team/team-members/team-12b.webp"
+    },
+    {
+      "id": "08",
+      "name": "Basking",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-13.webp",
+      "hoverImage": "/assets/team/team-members/team-13b.webp"
+    },
+    {
+      "id": "09",
+      "name": "Maria",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-14.webp",
+      "hoverImage": "/assets/team/team-members/team-14b.webp"
+    },
+    {
+      "id": "10",
+      "name": "Kirk",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-15.webp",
+      "hoverImage": "/assets/team/team-members/team-15b.webp"
+    },
+    {
+      "id": "11",
+      "name": "Itgma",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-16.webp",
+      "hoverImage": "/assets/team/team-members/team-16b.webp"
+    },
+    {
+      "id": "12",
+      "name": "Tenno",
+      "position": "Founder & CEO",
+      "image": "/assets/team/team-members/team-17.webp",
+      "hoverImage": "/assets/team/team-members/team-17b.webp"
+    }
+  ]
+}

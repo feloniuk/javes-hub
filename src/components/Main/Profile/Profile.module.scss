@@ -1,0 +1,140 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+
+  @include onTablet {
+    gap: 1.5rem;
+    margin-bottom: 2.75rem;
+  }
+
+  @include onLargeDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 7.25rem;
+  }
+}
+
+.heading {
+  max-width: 570px;
+
+  @include onMediumDesktop {
+    max-width: 740px;
+  }
+}
+
+.text {
+  @include font(var(--fs-body-m), 1.5, var(--fw-regular));
+
+  @include onTablet {
+    font-size: var(--fs-body-l);
+  }
+
+  @include onLaptop {
+    max-width: 740px;
+  }
+
+  @include onLargeDesktop {
+    max-width: 530px;
+  }
+}
+
+.imageWrapper {
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+
+  @include onTablet {
+    margin-bottom: 0;
+    padding-left: 1rem;
+    max-width: 100%;
+  }
+
+  @include onLaptop {
+    margin-right: -1rem;
+  }
+
+  @include onMediumDesktop {
+    margin-right: 0;
+    margin-inline: auto;
+    padding-left: 0;
+    max-width: 1170px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.buttonWrapper {
+  @include font(var(--fs-body-m), 1.5, var(--fw-regular));
+  margin-inline: auto;
+  max-width: 343px;
+  width: 100%;
+
+  //temp styles for button + all commented below
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  @include onTablet {
+    @include font(var(--fs-body-s), 1.5, var(--fw-medium));
+    position: absolute;
+    left: 50%;
+    // bottom: 0;
+    bottom: -29px;
+    max-width: 214px;
+    transform: translateX(-50%);
+  }
+  @include onLaptop {
+    @include font(var(--fs-body-l), 1.5, var(--fw-medium));
+    // bottom: 1%;
+    bottom: -2%;
+    max-width: 290px;
+    // max-height: 56px;
+    max-height: 85px;
+    height: 100%;
+  }
+
+  @include onMediumDesktop {
+    left: 48.2%;
+    // bottom: 3%;
+    bottom: 0;
+    max-width: 330px;
+  }
+}
+
+//temp label under button
+.tempText {
+  font-size: 14px;
+}

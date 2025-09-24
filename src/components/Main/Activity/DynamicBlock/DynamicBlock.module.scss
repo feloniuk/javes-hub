@@ -1,0 +1,74 @@
+@import '@/styles/utils/mixins';
+
+.dynamicElement {
+  min-width: 165px;
+  min-height: 165px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--br-s);
+  padding: 1rem;
+  background-color: var(--white-10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.value {
+  @include font(var(--fs-h2), 1.2, var(--fw-bold));
+  color: var(--white);
+}
+
+.label {
+  @include font(var(--fs-body-m), 1.5, var(--fw-regular));
+  color: var(--white-50);
+}
+
+.active {
+  background: var(--red-gradient);
+
+  .label {
+    color: var(--white);
+  }
+}
+
+.events {
+  @include onLaptop {
+    order: 2;
+  }
+}
+
+.dealValue {
+  @include onLaptop {
+    order: 4;
+  }
+}
+
+.deals {
+  @include onLaptop {
+    order: 5;
+  }
+
+  @include onMediumDesktop {
+    order: 6;
+  }
+}
+
+.games {
+  @include onLaptop {
+    order: 7;
+  }
+
+  @include onMediumDesktop {
+    order: 8;
+  }
+}
+
+.users {
+  @include onLaptop {
+    order: 8;
+  }
+
+  @include onMediumDesktop {
+    order: 10;
+  }
+}

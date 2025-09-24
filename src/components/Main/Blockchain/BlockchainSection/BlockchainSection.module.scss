@@ -1,0 +1,254 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 194px;
+  overflow: hidden;
+
+  @include onTablet {
+    padding-bottom: 100px;
+  }
+
+  @include onLaptop {
+    padding-bottom: 412px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 506px;
+  }
+}
+
+.sectionWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  margin-bottom: 2rem;
+
+  @include onTablet {
+    margin-bottom: 2.75rem;
+  }
+
+  @include onLaptop {
+    margin-bottom: 16.25rem;
+  }
+
+  @include onMediumDesktop {
+    margin-bottom: 11rem;
+    max-width: 350px;
+  }
+
+  @include onLargeDesktop {
+    max-width: none;
+  }
+}
+
+.descriptionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+  max-width: 406px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  background: linear-gradient(74deg, #FF6E75 -118.84%, #000223 73.73%);
+
+  @include onTablet {
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  @include onLaptop {
+    margin-bottom: 0;
+    transform: translateY(6px);
+  }
+
+  @include onMediumDesktop {
+    max-width: 438px;
+    transform: translateY(-25px);
+  }
+
+  @include onLargeDesktop {
+    transform: translateY(32px);
+  }
+}
+
+.subHeading {
+  max-width: 80%;
+  color: var(--white-70);
+  text-align: center;
+  line-height: 1;
+
+  @include onTablet {
+    line-height: 1.2;
+  }
+}
+
+.description {
+  max-width: 82%;
+  text-align: center;
+  font-size: var(--fs-body-m);
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 100%;
+  pointer-events: none;
+  animation: orbit 50s infinite linear;
+}
+
+.planet {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-inline: auto;
+  max-width: 540px;
+
+  @include onTablet {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.625rem;
+    max-width: 780px;
+  }
+
+  @include onLaptop {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    max-width: 912px;
+    width: 100%;
+    height: 943px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 982px;
+    top: 30px;
+    height: 1087px;
+  }
+}
+
+.orbitMobile1,
+.orbitMobile2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 0;
+
+  @include onTablet {
+    display: none;
+  }
+}
+
+.orbitMobile1 {
+  top: -105px;
+  min-width: 200vw;
+
+  @media (min-width: 445px) {
+    top: -105px;
+    min-width: 837px;
+  }
+}
+
+.orbitMobile2 {
+  bottom: 115px;
+  min-width: 768px;
+}
+
+.orbitTablet1 {
+  display: none;
+
+  @include onTablet {
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    display: block;
+    max-width: 706px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  @include onLaptop {
+    display: none;
+  }
+}
+
+.orbitLaptop1 {
+  display: none;
+
+  @include onLaptop {
+    position: absolute;
+    left: 50%;
+    top: 145px;
+    transform: translateX(-50%);
+    display: block;
+    max-width: 841px;
+    width: 100%;
+    z-index: 0;
+  }
+
+  @include onMediumDesktop {
+    top: 90px;
+    max-width: 906px;
+  }
+}
+
+@keyframes bigOrbit {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.orbitLaptop2 {
+  display: none;
+
+  @include onLaptop {
+    position: absolute;
+    left: 50%;
+    top: 210px;
+    transform: translateX(-50%);
+    display: block;
+    max-width: 706px;
+    width: 100%;
+    z-index: 0;
+    animation: bigOrbit 100s infinite linear;
+  }
+
+  @include onMediumDesktop {
+    top: 162px;
+    max-width: 760px;
+  }
+}

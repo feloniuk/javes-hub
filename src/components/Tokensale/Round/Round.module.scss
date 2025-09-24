@@ -1,0 +1,171 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 2;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @include onTablet {
+    gap: 6.125rem;
+  }
+
+  @include onLargeDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @include onLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @include onMediumDesktop {
+    gap: 2rem;
+  }
+
+  @include onLargeDesktop {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 346px;
+  }
+}
+
+.heading {
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  @include onTablet {
+    max-width: 100%;
+  }
+
+  @include onLaptop {
+    max-width: 310px;
+    flex-shrink: 0;
+  }
+
+  @include onMediumDesktop {
+    max-width: 350px;
+  }
+}
+
+.text {
+  @include font(var(--fs-body-l), 1.5, var(--fw-regular));
+  position: relative;
+  z-index: 2;
+
+  @include onTablet {
+    font-size: var(--fs-body-m);
+  }
+
+  @include onMediumDesktop {
+    font-size: var(--fs-body-l);
+  }
+
+  @include onLargeDesktop {
+    max-width: 330px;
+  }
+}
+
+.contentBlock {
+  position: relative;
+  width: 100%;
+
+  @include onTablet {
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  @include onLaptop {
+    max-width: 860px;
+  }
+}
+
+.mobileAnimationWrapper {
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%) rotate(270deg);
+  height: 343px;
+  width: 223px;
+  z-index: 0;
+
+  @include onTablet {
+    display: none;
+  }
+}
+
+.animationWrapper {
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  display: none;
+
+  @include onTablet {
+    display: block;
+    top: -52px;
+    left: 88px;
+    width: 192px;
+    height: 297px;
+  }
+
+  @include onLaptop {
+    top: -50px;
+    left: 123px;
+    width: 212px;
+    height: 327px;
+  }
+
+  @include onLargeDesktop {
+    top: -110px;
+    left: 89px;
+    width: 330px;
+    height: 508px;
+  }
+}
+
+
+.description {
+  @include font(1.25rem, 1.4, var(--fw-regular));
+  color: var(--white);
+  text-align: center;
+  margin-inline: auto;
+  max-width: 280px;
+  position: relative;
+  z-index: 2;
+
+  @include onMobile {
+    max-width: 500px;
+  }
+
+  @include onLaptop {
+    max-width: none;
+    font-size: 1.5rem;
+  }
+}

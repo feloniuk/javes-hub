@@ -1,0 +1,39 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 70px;
+
+  @include onTablet {
+    padding-bottom: 100px;
+  }
+
+  @include onLaptop {
+    padding-bottom: 80px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 110px;
+  }
+}
+
+.description {
+  font-size: var(--fs-h3);
+  margin-bottom: 1rem;
+}
+
+.heading {
+  background: linear-gradient(93deg, #FFF 14.18%, #713BD1 73.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include font(var(--fs-h0), 1.2, var(--fw-bold));
+  max-width: 550px;
+  position: relative;
+  z-index: 1;
+
+  @include onLaptop {
+    max-width: 100%;
+  }
+}

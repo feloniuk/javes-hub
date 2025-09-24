@@ -1,0 +1,88 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 75px;
+  }
+
+  @include onLargeDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+
+  @include onLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+.heading {
+  @include onTablet {
+    max-width: 280px;
+  }
+
+  @include onLaptop {
+    max-width: 280px;
+    flex-shrink: 0;
+  }
+
+  @include onMediumDesktop {
+    max-width: 375px;
+  }
+}
+
+.text {
+  @include font(var(--fs-body-l), 1.5, var(--fw-regular));
+  max-width: 672px;
+
+  @include onTablet {
+    font-size: 1.125rem;
+  }
+
+  @include onLaptop {
+    font-size: var(--fs-body-l);
+    max-width: 684px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 796px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 0.75rem;
+  margin-inline: auto;
+  justify-content: center;
+  max-width: 500px;
+
+  @include onTablet {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+  }
+
+  @include onLaptop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include onMediumDesktop {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

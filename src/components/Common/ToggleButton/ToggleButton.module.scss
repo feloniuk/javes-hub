@@ -1,0 +1,56 @@
+@import '@/styles/utils/mixins';
+
+.lefToggle,
+.rightToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 0;
+
+  border: 2px solid transparent;
+  border-radius: var(--br-s);
+  background-color: transparent;
+
+  position: relative;
+  z-index: 1;
+
+  @include onMobile {
+    width: 50%;
+  }
+}
+
+.lefToggle.active {
+  .leftToggleIcon,
+  .leftToggleIconSmall {
+    color: var(--light-crimson);
+  }
+}
+
+.rightToggle.active {
+  .rightToggleIcon,
+  .rightToggleIconSmall {
+    color: var(--apricot);
+  }
+}
+
+.leftToggleIcon,
+.rightToggleIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--white-50);
+  transition: color var(--transition-d) var(--transition-tf);
+}
+
+.leftToggleIconSmall,
+.rightToggleIconSmall {
+  width: 24px;
+  height: 24px;
+  color: var(--white-50);
+  transition: color var(--transition-d) var(--transition-tf);
+}
+
+.buttonText {
+  @include font(var(--fs-body-l), 1.5, var(--fw-medium));
+  color: var(--white);
+}

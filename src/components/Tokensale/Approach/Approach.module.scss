@@ -1,0 +1,86 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 167px;
+  }
+}
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+
+  @include onTablet {
+    gap: 2.5rem;
+  }
+
+  @include onLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include onMediumDesktop {
+    gap: 4rem;
+  }
+
+  @include onLargeDesktop {
+    gap: 2.5rem;
+  }
+}
+
+.imageWrapper {
+  margin-inline: auto;
+  max-width: 345px;
+  max-height: 332px;
+  width: 100%;
+  height: 100%;
+
+  @include onLaptop {
+    flex-shrink: 0;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.text {
+  @include font(var(--fs-h4), 1.3, var(--fw-regular));
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+
+  @include onMediumDesktop {
+    max-width: 881px;
+  }
+}
+
+.icon {
+  display: inline;
+  width: 32px;
+  height: 32px;
+  line-height: 1;
+  margin-bottom: -4px;
+}
+
+.iconSmall {
+  width: 30px;
+  height: 20px;
+}

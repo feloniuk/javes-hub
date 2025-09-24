@@ -1,0 +1,64 @@
+@import '@/styles/utils/mixins';
+
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  @include onTablet {
+    &:nth-of-type(n+5) {
+      display: none;
+    }
+  }
+
+  @include onLaptop {
+    &:nth-of-type(n+5) {
+      display: flex;
+    }
+
+    &:nth-of-type(n+7) {
+      display: none;
+    }
+  }
+
+  @include onLargeDesktop {
+    &:nth-of-type(n+7) {
+      display: flex;
+    }
+  }
+}
+
+.imagesWrapper {
+  position: relative;
+  max-width: 248px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: var(--br-s);
+  overflow: hidden;
+  background-color: var(--white-10);
+
+  @include onLaptop {
+    &:hover {
+      .image {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--br-s);
+  transform: translateY(0);
+  transition: transform 0.2s var(--transition-tf);
+}
+
+.label {
+  @include font(var(--fs-body-l));
+  color: var(--white);
+}

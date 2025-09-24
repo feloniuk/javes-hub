@@ -1,0 +1,50 @@
+@import '@/styles/utils/mixins';
+
+.staticElement {
+  min-width: 165px;
+  min-height: 165px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--br-s);
+  border: 2px solid var(--white-15);
+}
+
+.element-1,
+.element-2,
+.element-3,
+.element-4 {
+  @include onTablet {
+    display: none;
+  }
+}
+
+.element-1 {
+  @include onLaptop {
+    display: block;
+    order: 3;
+  }
+}
+
+.element-2 {
+  @include onLaptop {
+    display: block;
+    order: 6;
+  }
+
+  @include onMediumDesktop {
+    order: 5;
+  }
+}
+
+.element-3 {
+  @include onMediumDesktop {
+    display: block;
+    order: 7;
+  }
+}
+
+.element-4 {
+  @include onMediumDesktop {
+    display: block;
+    order: 9;
+  }
+}

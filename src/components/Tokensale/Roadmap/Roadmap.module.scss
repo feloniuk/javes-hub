@@ -1,0 +1,179 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 75px;
+  }
+
+  @include onLargeDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+
+  @include onTablet {
+    margin-bottom: 5.25rem;
+  }
+
+  @include onLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.5rem;
+  }
+
+  @include onLargeDesktop {
+    margin-bottom: 3rem;
+  }
+}
+
+.heading {
+  @include onLaptop {
+    max-width: 307px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+}
+
+.text {
+  @include font(1rem, 1.5, var(--fw-regular));
+  max-width: 672px;
+
+  @include onMediumDesktop {
+    font-size: 1.125rem;
+    max-width: none;
+  }
+}
+
+.timelineBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 103%;
+  overflow-x: scroll;
+  user-select: none;
+  padding-top: 10px;
+  white-space: nowrap;
+  margin-left: -10px;
+  padding-bottom: 50px;
+  cursor: grab;
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--white-10);
+    border-radius: var(--br-xs);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--purple-gradient);
+    border-radius: var(--br-xs);
+    cursor: grab;
+  }
+
+  @include onTablet {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@-moz-document url-prefix() {
+  .timelineBlock {
+    scrollbar-width: auto;
+    scrollbar-color: var(--purple) var(--white-10);
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 126px 1fr;
+  height: 96px;
+  min-width: 100%;
+  width: max-content;
+}
+
+.event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font(1.125rem, 1.5, var(--fw-medium));
+  color: var(--white);
+  position: sticky;
+  left: 0;
+  z-index: 11;
+  background: linear-gradient(to right, #000223 95%, transparent);
+
+  @include onTablet {
+    justify-content: flex-start;
+  }
+}
+
+.dates {
+  height: 43px;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: 198.4px 179.2px 198.4px 192px 198.4px 192px 198.4px 198.4px 192px 198.4px 192px 198.4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  &.lastTimline {
+    border-bottom: none;
+  }
+}
+
+.datesGrid {
+  display: grid;
+  grid-template-columns: 198.4px 179.2px 198.4px 192px 198.4px 192px 198.4px 198.4px 192px 198.4px 192px 198.4px;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  @include font(1.125rem, 1.5, var(--fw-medium));
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+  &:nth-child(1),
+  &:nth-child(3),
+  &:nth-child(5),
+  &:nth-child(7),
+  &:nth-child(8),
+  &:nth-child(10) { 
+    width: 198.4px; 
+  }
+
+  &:nth-child(2) { 
+    width: 179.2px; 
+  }
+
+  &:nth-child(4),
+  &:nth-child(6),
+  &:nth-child(9),
+  &:nth-child(11) { 
+    width: 192px; 
+  }
+
+  &:nth-child(12) { 
+    width: 198.4px;
+    border-right: none;
+  }
+}

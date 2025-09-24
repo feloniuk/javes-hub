@@ -1,0 +1,159 @@
+@import '@/styles/utils/mixins';
+
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.footerContainer {
+  position: relative;
+  z-index: 1;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--white-50);
+
+  @include onTablet {
+    padding-top: 2.5rem;
+  }
+
+  @include onLaptop {
+    padding-bottom: 3.5rem;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 4.375rem;
+  }
+}
+
+.topBlock {
+  @include onTablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+  }
+
+  @include onLaptop {
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  @include onMediumDesktop {
+    align-items: flex-end;
+    margin-bottom: 5.5rem;
+  }
+}
+
+.middleBlock {
+  @include onLaptop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.75rem;
+  }
+}
+
+.leftBlock {
+  @include onMediumDesktop {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  @include onLargeDesktop {
+    gap: 3.25rem;
+  }
+}
+
+.rightBlock {
+  @include onMediumDesktop {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+  }
+}
+
+.bottomBlock {
+  @include onLaptop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+}
+
+.ctaBlock {
+  @include onTablet {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+  }
+}
+
+.description {
+  @include font(var(--fs-body-m), 1.5, var(--fw-regular));
+  margin-bottom: 3rem;
+  max-width: 550px;
+
+  @include onTablet {
+    max-width: 800px;
+  }
+
+  @include onLaptop {
+    margin-bottom: 0;
+    max-width: 645px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 790px;
+  }
+}
+
+.termsBlock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.25rem;
+  margin-bottom: 2.25rem;
+
+  @include onTablet {
+    margin-bottom: 3rem;
+  }
+
+  @include onLaptop {
+    margin-bottom: 0;
+  }
+
+  @include onMediumDesktop {
+    gap: 1rem;
+  }
+
+  @include onLargeDesktop {
+    gap: 2.25rem;
+  }
+}
+
+.termsLink {
+  @include font(var(--fs-body-m), 1.5, var(--fw-medium));
+  color: var(--white);
+
+  @include onTablet {
+    font-size: var(--fs-body-l);
+  }
+
+  @include onLaptop {
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+  }
+}
+
+.rights {
+  @include font(var(--fs-body-m), 1.5, var(--fw-medium));
+  color: var(--white-50);
+  white-space: nowrap;
+
+  @include onTablet {
+    font-size: var(--fs-body-l);
+  }
+}

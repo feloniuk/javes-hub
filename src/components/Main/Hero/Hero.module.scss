@@ -1,0 +1,182 @@
+@import '@/styles/utils/mixins';
+
+.sectionWrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  max-height: 120vh;
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  margin-bottom: 3.75rem;
+  max-width: 3840px;
+  margin-inline: auto;
+}
+
+.topAnimationWrapper {
+  width: 100vw;
+  max-width: 3840px;
+  height: auto;
+}
+
+.bottomAnimationWrapper {
+  width: 100vw;
+  max-width: 3840px;
+  height: auto;
+}
+
+.contentWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  margin-top: -100px;
+  margin-bottom: -100px;
+
+  @media (min-width: 1920px) {
+    margin-top: -130px;
+    margin-bottom: -130px;
+  }
+}
+
+.heading {
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 400px;
+  padding: 0 1rem;
+
+  opacity: 0.01;
+  transform: translateX(-50px);
+
+  @include onTablet {
+    max-width: 850px;
+    margin-bottom: 1.5rem;
+  }
+
+  @include onMediumDesktop {
+    max-width: 100%;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 5rem;
+  }
+}
+
+.orangeGradientText {
+  background: linear-gradient(93deg, #FF9E41 34.18%, #FFF 73.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--fw-bold);
+}
+
+.purpleGradientText {
+  background: linear-gradient(93deg, #FFF 14.18%, #713BD1 73.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--fw-bold);
+}
+
+.description {
+  @include font(var(--fs-body-m, 1.5, var(--fw-regular)));
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 540px;
+  padding: 0 1rem;
+
+  opacity: 0.01;
+  transform: translateX(50px);
+
+  @include onTablet {
+    max-width: 620px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 750px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: var(--fs-body-xl);
+    max-width: 1000px;
+  }
+}
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  min-width: 152px;
+  width: 100%;
+  align-items: center;
+
+  @include onMobile {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}
+
+.btnWrapper {
+  min-width: 152px;
+  max-width: 259px;
+  width: 100%;
+  opacity: 0.01;
+  transform: translatex(-100px);
+
+  //temp styles for button
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+//temp label under button
+.tempText {
+  font-size: 12px;
+}
+
+.linkHero {
+  @include font(var(--fs-body-s), 1.5, var(--fw-medium));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  
+  padding-bottom: 0.5rem;
+  max-width: 126px;
+  width: 100%;
+
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+  transition: border-bottom var(--transition-d) var(--transition-tf);
+
+  opacity: 0.01;
+  transform: translatex(100px);
+
+  @include onLaptop {
+    &:hover {
+      border-bottom: 1px solid transparent;
+  
+      .linkArrow {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    font-size: var(--fs-body-l);
+  }
+}
+
+.linkText {
+  white-space: nowrap;
+}
+
+.linkArrow {
+  transform: translateX(0);
+  transition: transform var(--transition-d) var(--transition-tf);
+}

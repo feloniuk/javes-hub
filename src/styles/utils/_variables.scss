@@ -1,0 +1,96 @@
+:root {
+  font-size: 16px;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+ /*Primary*/
+  --main-bg: #000223;
+  --white: #ffffff;
+  --white-70: #ffffffB3;
+  --white-50: #ffffff7f;
+  --white-15: #ffffff26;
+  --white-10: #ffffff19;
+  --white-5: #ffffff0c;
+  --success: #51C216;
+
+  /*Accent*/
+  --purple: #8541FF;
+  --geraldine: #EF7271;
+  --light-crimson: #F56C8F;
+  --apricot: #FBBE7E;
+  --purple-gradient: linear-gradient(180deg, #8541FF 0%, #452183 100%);
+  --red-gradient: linear-gradient(149deg, #F56C8F 6.92%, #EF7271 94.05%);
+  --orange-gradient: linear-gradient(17deg, #FF6E75 14.39%, #FBBE7E 107.32%);
+
+  /*font weight*/
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /*font size*/
+  --fs-body-s: 0.875rem;
+  --fs-body-m: 0.875rem;
+  --fs-body-l: 1rem;
+  --fs-body-xl: 1.125rem;
+  --fs-h4: 1.5rem;
+  --fs-h3: 1.75rem;
+  --fs-h2: 2rem;
+  --fs-h1: 2.5rem;
+  --fs-h0: 4rem;
+
+  /*border-radius*/
+  --br-xs: 0.75rem;
+  --br-s: 1rem;
+  --br-m: 1.5rem;
+
+  /*transition*/
+  --transition-tf: ease-in-out;
+  --transition-d: 0.25s;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-body-s: 0.875rem;
+    --fs-body-m: 1rem;
+    --fs-body-l: 1rem;
+    --fs-body-xl: 1.25rem;
+    --fs-h4: 1.75rem;
+    --fs-h3: 2rem;
+    --fs-h2: 2.5rem;
+    --fs-h1: 3.5rem;
+    --fs-h0: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-body-s: 0.875rem;
+    --fs-body-m: 1rem;
+    --fs-body-l: 1.125rem;
+    --fs-body-xl: 1.25rem;
+    --fs-h4: 1.75rem;
+    --fs-h3: 2rem;
+    --fs-h2: 2.5rem; 
+    --fs-h1: 3.5rem;
+    --fs-h0: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --fs-body-s: 0.875rem;
+    --fs-body-m: 1rem;
+    --fs-body-l: 1.125rem;
+    --fs-body-xl: 1.5rem;
+    --fs-h4: 2rem;
+    --fs-h3: 2.5rem;
+    --fs-h2: 3rem;
+    --fs-h1: 4rem;
+    --fs-h0: 6.25rem;
+  }
+}

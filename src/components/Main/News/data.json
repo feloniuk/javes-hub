@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/home/news/news-1.webp",
+    "imageAltText": "news",
+    "icon": "/assets/home/news/medium-icon.svg",
+    "iconAltText": "Medium logo",
+    "date": "14.05.24",
+    "title": "Unlocking the Shadow Market: The Untapped Billion-Dollar Economy of Gamer Trading",
+    "link": "https://javespr.medium.com/unlocking-the-shadow-market-the-untapped-billion-dollar-economy-of-gamer-trading-013bf1085ce1"
+  },
+  {
+    "id": 2,
+    "image": "/assets/home/news/news-2.webp",
+    "imageAltText": "news",
+    "icon": "/assets/home/news/medium-icon.svg",
+    "iconAltText": "Medium logo",
+    "date": "16.05.24",
+    "title": "JVS Token, The Fuel that Powers Everything",
+    "link": "https://javes.co/token"
+  },
+  {
+    "id": 3,
+    "image": "/assets/home/news/news-3.webp",
+    "imageAltText": "news",
+    "icon": "/assets/home/news/medium-icon.svg",
+    "iconAltText": "Medium logo",
+    "date": "20.05.24",
+    "title": "Blockchain for the True Old-School Gamers",
+    "link": "https://javes.co/blockchain"
+  },
+  {
+    "id": 4,
+    "image": "/assets/home/news/news-4.webp",
+    "imageAltText": "news",
+    "icon": "/assets/home/news/medium-icon.svg",
+    "iconAltText": "Medium logo",
+    "date": "29.05.24",
+    "title": "Javes Boost&Earn Program",
+    "link": "/"
+  },
+  {
+    "id": 5,
+    "image": "/assets/home/news/news-5.webp",
+    "imageAltText": "news",
+    "icon": "/assets/home/news/medium-icon.svg",
+    "iconAltText": "Medium logo",
+    "date": "26.06.24",
+    "title": "Javes PROfile Sign-Ups & Public Profile Creation",
+    "link": "/"
+  },
+  {
+    "id": 6,
+    "image": "/assets/home/news/news-6.webp",
+    "imageAltText": "news",
+    "icon": "/assets/home/news/medium-icon.svg",
+    "iconAltText": "Medium logo",
+    "date": "28.05.24",
+    "title": "Behind Javes: The Team, Advisors, and Partners",
+    "link": "/"
+  }
+]

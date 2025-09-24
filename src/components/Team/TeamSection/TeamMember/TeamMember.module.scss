@@ -1,0 +1,50 @@
+@import '@/styles/utils/mixins';
+
+.imagesWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 0.5rem;
+}
+
+.imageWrapper,
+.hoverImageWrapper {
+  width: 100%;
+  border-radius: var(--br-s);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.hoverImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+
+  @include onLaptop {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.memberPhoto {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--br-s);
+}
+
+.name {
+  @include font(1.125rem, 1.5, var(--fw-medium));
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.position {
+  @include font(var(--fs-body-s), 1.5, var(--fw-regular));
+  color: var(--white-50);
+}

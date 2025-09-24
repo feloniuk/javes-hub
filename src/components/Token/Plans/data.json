@@ -1,0 +1,26 @@
+[
+  {
+    "id": "starter",
+    "title": "Starter", 
+    "price": "Free Plan", 
+    "description": "If you are an individual player making a few deals per week as a hobby and for some extra income, the Starter plan is for you.", 
+    "time": "30",
+    "discount": ""
+  },
+  {
+    "id": "epic",
+    "title": "Epic Plan", 
+    "price": "45", 
+    "description": "If you are a PRO player who has turned your gaming activity into a full-time job and are interested in a high volume of deals, the Epic plan will be the best choice.", 
+    "time": "15", 
+    "discount": "-20%"
+  },
+  {
+    "id": "legend",
+    "title": "Legendary Plan", 
+    "price": "125", 
+    "description": "If you represent a group or guild, engage in professional-level trading in games, and want access to all deals, you should definitely choose the Legendary plan.", 
+    "time": "Instantly", 
+    "discount": "-50%"
+  }
+]

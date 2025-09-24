@@ -1,0 +1,63 @@
+@import '@/styles/utils/mixins';
+
+.bar {
+  position: absolute;
+  height: 64px;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-bg);
+  z-index: 1;
+  cursor: default;
+}
+
+.firstRowBar {
+  background: #EF7271;
+  box-shadow: 0 0 17px 3px rgba(239, 114, 113, 0.6);
+}
+
+.secondRowBar {
+  background: #9150F4;
+  box-shadow: 0 0 20px 3px rgba(145, 80, 244, 0.6);
+}
+
+.thirdRowBar {
+  background: #8FDAFF;
+  box-shadow: 0 0 20px 3px rgba(143, 218, 255, 0.6);
+}
+
+.fourthRowBar {
+  background: #66FFB3;
+  box-shadow: 0 0 20px 3px rgba(102, 255, 179, 0.6);
+}
+
+.fifthRowBar {
+  background: #FFA0C9;
+  box-shadow: 0 0 20px 3px rgba(255, 136, 204, 0.6);
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 2, 35, 0.6);
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  min-height: 75px;
+  padding: 1rem;
+  border-radius: var(--br-s);
+  color: var(--white-70);
+  font-size: 0.75rem;
+
+  opacity: 0;
+  transition: opacity var(--transition-d) var(--transition-tf);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.tooltipVisible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 11;
+}

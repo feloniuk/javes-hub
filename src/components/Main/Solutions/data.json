@@ -1,0 +1,107 @@
+{
+  "content": [
+    {
+      "id": "PRO’s Database",
+      "type": "proPlayer",
+      "title": "PRO-Players Database",
+      "text": "A unified and open database of PRO Players active in the P2P market, featuring a catalog of services they offer, their reputation, and real-time availability status, accessible to all market participants in form of a web application or through the Javes API, with the ability to make in-game trade deals.",
+      "image": "/assets/home/solutions/solution-1.svg",
+      "altText": "A diagram with 'Pro-Player' profiles linked to a central cloud symbolizing data exchange."
+    },
+    {
+      "id": "Deals Matchmaking",
+      "type": "proPlayer",
+      "title": "Game-Deals Matchmaking",
+      "text": "An automatic matchmaking system for players looking to make an in-game trade deal. The Javes matchmaking algorithm, by using the PRO's Database, selects the best performer or supplier for any order in any online game, whether it's for in-game currency, items, or services, and also ensures the safety of the deal.",
+      "image": "/assets/home/solutions/solution-2.svg",
+      "altText": "A network chart showing 'Casual Players' connected to a 'Pro-Player' with a handshake indicating collaboration."
+    },
+    {
+      "id": "Booking Calendar",
+      "type": "proPlayer",
+      "title": "PRO-Players Booking Calendar",
+      "text": "When it comes to gaming services where a PRO-Player assists a casual player in completing a challenging gaming activity during a co-op session, it requires scheduling a specific date and time when both players must be online. Thanks to the Javes Booking Calendar, PRO-Players can manage their schedules by marking their available hours, allowing other players to book desired slots and see PRO-Players' availability in real-time.",
+      "image": "/assets/home/solutions/solution-3.svg",
+      "altText": "A weekly schedule with times blocked out, including a skull icon indicating canceled slots."
+    },
+    {
+      "id": "Flexible Payments",
+      "type": "proPlayer",
+      "title": "Players decide how to get paid",
+      "text": "Transaction security is vital for PRO-Players, but excessive measures can hinder trades among trusted players. Javes allows PRO-Players to decide on prepayment for new clients or post-payment for trusted ones. For business clients with multiple orders, payments can be consolidated into bulk transactions.",
+      "image": "/assets/home/solutions/solution-4.svg",
+      "altText": "A diagram of a 'Pro-Player' with connections to a 'Trusted client,' 'B2B client,' and 'Unknown client,' with symbols indicating transaction statuses."
+    },
+    {
+      "id": "Reputation",
+      "type": "proPlayer",
+      "title": "PRO-Players’ Reputation",
+      "text": "By operating within the Javes trading ecosystem, PRO-Players will build their reputation, aiming for high-quality services to secure more gaming deals on better terms. Reputation will play a crucial role in both the Deals Matchmaking algorithm and market self-promotion, filtering out scammers and dishonest players.",
+      "image": "/assets/home/solutions/solution-5.svg",
+      "altText": "A comparison between a 'Pro-Player' with 325 deals and a 'Scammer' with 2 deals, highlighted by a handshake graphic."
+    },
+    {
+      "id": "Orders Management",
+      "type": "onlineShop",
+      "title": "Orders Management for Shops",
+      "text": "Online shops will be provided with an admin panel that includes an orders management system. Here, they can process incoming orders and, with just a few clicks or even fully automatically, select a PRO-Player for their clients, thereby simplifying and automating order processing.",
+      "image": "/assets/home/solutions/solution-6.svg",
+      "altText": "A flowchart leading from a user ID verification to a 'Pro-Player' profile and a 'Find a Pro' option."
+    },
+    {
+      "id": "Sales Widgets",
+      "type": "onlineShop",
+      "title": "Sales Widgets for Shops",
+      "text": "Sales Widgets are standalone tools that interact with the Javes ecosystem and are embedded into online shop pages. Examples include a booking calendar, cross-chat system, price synchronizer, trust boxes, and many others. These widgets are designed to enhance the efficiency of online shops in the market and positively impact sales.",
+      "image": "/assets/home/solutions/solution-7.svg",
+      "altText": "A graphical user interface featuring a weekly calendar and a separate chat notification window."
+    },
+    {
+      "id": "Cross Chat",
+      "type": "onlineShop",
+      "title": "Cross Chat System",
+      "text": "An online shop can integrate with the Javes Cross Chat system, connecting the client with a PRO-Player and the shop's manager in a single unified chat for faster and efficient communication. Additionally, the cross-chat will feature the Javes AI Chat Bot, which can provide any information to the client using data from the Javes Database.",
+      "image": "/assets/home/solutions/solution-8.svg",
+      "altText": "A flowchart showing 'Pro-Player' profiles with various earnings linked to a rejected 'Bot Farmer' and an approved 'Casual Player."
+    },
+    {
+      "id": "Services Database",
+      "type": "onlineShop",
+      "title": "Game Services Database",
+      "text": "Online stores can expand their range of gaming services available in their catalog by connecting to the Javes Services Database. From there, they can manually or automatically retrieve all the necessary data for trading with these services, thereby accelerating and simplifying the process of adding new games to their inventory.",
+      "image": "/assets/home/solutions/solution-9.svg",
+      "altText": "A flowchart showing 'Pro-Player' profiles with various earnings linked to a rejected 'Bot Farmer' and an approved 'Casual Player."
+    },
+    {
+      "id": "Game Coins",
+      "type": "onlineShop",
+      "title": "Smart Delivery of Game Coins ",
+      "text": "One big problem in the game currency market is bots. They hurt game economies and risk players' accounts who buy coins from them. Javes changes this with its Coins Smart Delivery system. It makes sure that only real players fulfill orders for game coins, gathering data about available coins from players in the PRO-Players Database.",
+      "image": "/assets/home/solutions/solution-10.svg",
+      "altText": "A flowchart showing 'Pro-Player' profiles with various earnings linked to a rejected 'Bot Farmer' and an approved 'Casual Player."
+    }
+  ],
+
+  "navigation": [
+    {
+      "type": "proPlayers",
+      "items": [
+        "PRO’s Database",
+        "Deals Matchmaking",
+        "Booking Calendar",
+        "Flexible Payments",
+        "Reputation"
+      ]
+    },
+    {
+      "type": "onlineShops",
+      "items": [
+        "Orders Management",
+        "Sales Widgets",
+        "Cross Chat",
+        "Services Database",
+        "Game Coins"
+      ]
+    }
+  ]
+}

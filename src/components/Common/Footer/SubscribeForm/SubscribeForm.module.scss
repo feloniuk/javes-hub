@@ -1,0 +1,124 @@
+@import '@/styles/utils/mixins';
+
+.subscribeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+
+  @include onTablet {
+    margin-bottom: 0;
+  }
+}
+
+.inputLabel {
+  @include font(var(--fs-body-m));
+  color: var(--white);
+}
+
+.inputGroup {
+  display: flex;
+  position: relative;
+  max-width: 344px;
+  width: 100%;
+  height: 3rem;
+  border: 1px solid var(--white-50);
+  border-radius: 0.5rem;
+  transition: border-color var(--transition-d) var(--transition-tf);
+
+  @include onLaptop {
+    &:hover {
+      border-color: var(--white);
+
+      & .arrow {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &.focus {
+    border-color: var(--white);
+  }
+
+  &.focus .arrow {
+    transform: rotate(-45deg);
+  }
+
+  &.error {
+    border-color: var(--light-crimson);
+    transition: none; 
+  }
+
+  &.error .arrow {
+    color: var(--light-crimson);
+  }
+
+  &.success {
+    border-color: var(--success);
+    transition: none;
+  }
+
+  @include onTablet {
+   width: 329px;
+  }
+
+}
+
+.emailInput {
+  flex-grow: 1;
+  padding-left: 1rem;
+  border: none;
+  background: transparent;
+  outline: none;
+  @include font(var(--fs-body-m), 1.5, var(--fw-regular));
+  color: var(--white);
+
+  &::placeholder {
+    color: var(--white-50);
+    vertical-align: middle;
+    font-size: 0.875rem;
+  }
+}
+
+.errorMessage,
+.successMessage,
+.processMessage {
+  position: absolute;
+  left: 5;
+  bottom: -25px;
+  font-size: 0.75rem;
+}
+
+.errorMessage {
+  color: var(--light-crimson);
+}
+
+.successMessage {
+  color: var(--success);
+}
+
+.processMessage {
+  color: var(--white-70);
+}
+
+.subscibeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  flex-shrink: 0;
+}
+
+.arrow {
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(0);
+  transition: transform var(--transition-d) var(--transition-tf);
+  color: var(--white);
+}
+
+.checked {
+  width: 1.25rem;
+  height: 1.25rem;
+}

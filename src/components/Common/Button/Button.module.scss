@@ -1,0 +1,80 @@
+@import '@/styles/utils/mixins';
+
+.buttonHero,
+.buttonCard,
+.buttonTokenHero,
+.buttonApply,
+.buttonMore {
+  @include font(var(--fs-body-s), 1.5, var(--fw-medium));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 48px;
+
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: var(--br-xs);
+  transition: background-color var(--transition-d) var(--transition-tf);
+
+  @include onLaptop {
+    &:hover {
+      background-color: var(--geraldine);
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: #717585;
+    pointer-events: none;
+    color: #cecfD4;
+  }
+}
+
+.buttonHero {
+  min-width: 152px;
+  max-width: 259px;
+
+  @include onMobile {
+    max-width: 211px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: var(--fs-body-l);
+    max-width: 250px;
+  }
+}
+
+.buttonApply {
+  min-height: 56px;
+  font-size: 1.125rem;
+}
+
+.buttonCard {
+  width: 100%;
+  font-size: inherit;
+  height: 100%;
+}
+
+.buttonMore {
+  min-height: 56px;
+  font-size: 1.125rem;
+  gap: 6px;
+
+  &::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url('/assets/home/hero/hero-arrow.svg');
+    background-size: cover;
+    transform: rotate(45deg);
+    transition: transform var(--transition-d) var(--transition-tf);;
+  }
+
+  @include onLaptop {
+    &:hover::after {
+      transform: rotate(0deg);
+    }
+  }
+}

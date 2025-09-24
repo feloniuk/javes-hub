@@ -1,0 +1,53 @@
+@import '@/styles/utils/mixins';
+
+.filterLabel {
+  font-size: 18px;
+}
+
+.battonWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-10);
+  border-radius: var(--br-s);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    background: var(--main-bg);
+    height: 50%;
+    width: 100%;
+    z-index: 0;
+    border-radius: var(--br-s);
+    border: 2px solid var(--light-crimson);
+    transition: top var(--transition-d) var(--transition-tf), border var(--transition-d) var(--transition-tf);
+
+    @include onMobile {
+      top: auto;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      transition: left var(--transition-d) var(--transition-tf), border var(--transition-d) var(--transition-tf);
+    }
+  }
+
+  &.active::after {
+    border: 2px solid var(--apricot);
+    top: 50%;
+
+    @include onMobile {
+      top: auto;
+      left: 50%;
+    }
+  }
+
+  @include onMobile {
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 376px;
+    max-height: 56px;
+    width: 100%;
+  }
+}

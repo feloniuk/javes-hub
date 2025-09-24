@@ -1,0 +1,44 @@
+@import '@/styles/utils/mixins';
+
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  opacity: 0.01;
+  transform: translatey(100px);
+}
+
+.imagesWrapper {
+  position: relative;
+  max-width: 248px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: var(--br-s);
+  overflow: hidden;
+
+  @include onLaptop {
+    &:hover {
+      .image {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--br-s);
+  transform: translateY(0);
+  transition: transform 0.2s var(--transition-tf);
+}
+
+.label {
+  @include font(var(--fs-body-l));
+  color: var(--white);
+}

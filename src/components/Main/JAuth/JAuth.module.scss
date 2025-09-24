@@ -1,0 +1,116 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 100px;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 243px;
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+
+  @include onMediumDesktop {
+    margin-bottom: 3rem;
+  }
+}
+
+.heading {
+  @include font(var(--fs-h2), 1.5, var(--fw-regular));
+}
+
+.bold {
+  color: var(--white);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+}
+
+.description {
+  font-size: var(--fs-body-m);
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+
+  @include onMediumDesktop {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.graphicBlock {
+  position: relative;
+  max-width: 295px;
+  width: 100%;
+  min-height: 565px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  @include onTablet {
+    max-width: 648px;
+    min-height: 298px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @include onLargeDesktop {
+    max-width: 723px;
+    min-height: 333px;
+  }
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.buttonWrapper {
+  max-width: 165px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  @include onTablet {
+    max-width: 219px;
+  }
+
+  @include onLargeDesktop {
+    max-width: 244px;
+  }
+}
+
+.text {
+  @include font(var(--fs-body-l), 1.5, var(--fw-regular));
+
+  @include onTablet {
+    font-size: 1.125rem;
+    max-width: 648px;
+  }
+
+  @include onLaptop {
+    font-size: var(--fs-body-l);
+  }
+
+  @include onMediumDesktop {
+    max-width: 403px;
+  }
+}

@@ -1,0 +1,524 @@
+@import '@/styles/utils/mixins';
+
+.lbGlowWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 2700px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  max-width: 3840px;
+
+  @include onMobile {
+    width: 70%;
+    bottom: 2650px;
+  }
+
+  @include onTablet {
+    bottom: 1200px;
+  }
+
+  @media (min-width: 900px) {
+    width: 60%;
+    bottom: 1200px;
+  }
+
+  @include onLaptop {
+    bottom: 1100px;
+    // width: 70%;
+  }
+
+  @include onMediumDesktop {
+    width: 60%;
+  }
+
+  @include onLargeDesktop {
+    bottom: 1200px;
+    width: 70%;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: 700px;
+    width: 80%;
+  }
+}
+
+.ltGlowWrapper {
+  position: absolute;
+  left: 0;
+  top: 2200px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  max-width: 3840px;
+
+  @include onMobile {
+    top: 2300px;
+  }
+
+  @include onTablet {
+    top: 1300px;
+  }
+
+  @include onLaptop {
+    top: 1200px;
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    width: 60%;
+  }
+
+  @include onLargeDesktop {
+    top: 1000px;
+    width: 70%;
+  }
+
+  @media (min-width: 1920px) {
+    top: 700px;
+    width: 80%;
+  }
+}
+
+.rtGlowWrapper {
+  position: absolute;
+  right: 0;
+  top: 1150px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  max-width: 3840px;
+
+  @include onMobile {
+    width: 70%;
+    top: 1050px;
+  }
+
+  @include onTablet {
+    width: 75%;
+    top: 150px;
+  }
+
+  @media (min-width: 900px) {
+    width: 65%;
+    top: 100px;
+  }
+
+  @include onLaptop {
+    top: 100px;
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    width: 60%;
+  }
+
+  @include onLargeDesktop {
+    top: 20px;
+  }
+
+  @media (min-width: 1920px) {
+    top: 0;
+  }
+}
+
+.rbGlowWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 3900px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  max-width: 3840px;
+
+  @include onMobile {
+    bottom: 3600px;
+  }
+
+  @include onTablet {
+    bottom: 2700px;
+  }
+
+  @include onLaptop {
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    width: 60%;
+  }
+
+  @include onLargeDesktop {
+    bottom: 2600px;
+    width: 60%;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: 2200px;
+  }
+}
+
+.bottomGlowWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  max-width: 3840px;
+
+  @include onMobile {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: 1920px) {
+    width: 60%;
+  }
+}
+
+.leftTopTokenWrapper {
+  position: absolute;
+  left: 0;
+  top: 2900px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onMobile {
+    top: 2100px;
+  }
+
+  @include onTablet {
+    top: 1800px;
+    width: 100%;
+  }
+
+  @include onLaptop {
+    top: 1600px;
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    top: 1800px;
+  }
+
+  @include onLargeDesktop {
+    top: 1800px;
+  }
+
+  @media (min-width: 1920px) {
+    top: 1000px;
+    width: 80%;
+  }
+}
+
+.leftBottomTokenWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 2100px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onMobile {
+    bottom: 2000px;
+  }
+
+  @include onTablet {
+    bottom: 600px;
+  }
+
+  @include onLaptop {
+    display: none;
+  }
+}
+
+.rightTopTokenWrapper {
+  position: absolute;
+  right: 0;
+  top: 1150px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onMobile {
+    top: 600px;
+  }
+
+  @include onTablet {
+    top: 500px;
+  }
+
+  @include onLaptop {
+    top: 400px;
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    width: 60%;
+  }
+
+  @media (min-width: 1920px) {
+    top: 0;
+  }
+}
+
+.rightBottomTokenWrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: -200px;
+  width: 70%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onLaptop {
+    display: block;
+  }
+
+  @include onMediumDesktop {
+    width: 60%;
+  }
+
+  @include onLargeDesktop {
+    bottom: -350px;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: -600px;
+  }
+}
+
+.rightTopTokensale {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+
+  @include onTablet {
+    display: block;
+    top: -200px;
+  }
+
+  @include onLaptop {
+    top: -400px;
+  }
+
+  @include onMediumDesktop {
+    width: 80%;
+    top: -500px;
+  }
+
+  @include onLargeDesktop {
+    width: 70%;
+    top: -620px;
+  }
+
+  @media (min-width: 1920px) {
+    top: -900px;
+  }
+
+  @media (min-width: 2500px) {
+    top: -1300px;
+  }
+}
+
+.rightTeamWrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+
+  @include onTablet {
+    display: block;
+    top: -300px;
+  }
+
+  @include onLaptop {
+    top: 1400px;
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    top: 250px;
+    width: 70%;
+  }
+
+  @media (min-width: 1920px) {
+    top: -600px;
+    width: 90%;
+  }
+
+}
+
+.leftTeamWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 1100px;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onTablet {
+    bottom: 1500px;
+    width: 90%;
+  }
+
+  @include onLaptop {
+    bottom: 200px;
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    bottom: 400px;
+    width: 70%;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: -300px;
+    width: 90%;
+  }
+}
+
+.rightBlockchainWrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+
+  @include onTablet {
+    display: block;
+    top: 800px;
+  }
+
+  @include onLaptop {
+    top: 600px;
+  }
+
+  @include onMediumDesktop {
+    top: 400px;
+  }
+
+  @media (min-width: 1920px) {
+    top: -1000px;
+    width: 90%;
+  }
+}
+
+.leftBlockchainWrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 1100px;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onTablet {
+    display: block;
+    bottom: 800px;
+  }
+
+  @include onLaptop {
+    bottom: 400px;
+  }
+
+  @include onMediumDesktop {
+    bottom: 0;
+    width: 50%;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: auto;
+    top: 450px;
+    width: 70%;
+  }
+}
+.leftTokensaleWrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 90%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onTablet {
+    display: block;
+    bottom: 1300px;
+  }
+
+  @include onLaptop {
+    bottom: 1400px;
+    width: 70%;
+  }
+
+  @include onMediumDesktop {
+    bottom: 1200px;
+  }
+
+  @include onLargeDesktop {
+    bottom: 400px;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: 250px;
+  }
+}
+
+.rightGamesWrapper {
+  display: none;
+  position: absolute;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+
+  @include onLaptop {
+    display: block;
+    right: 0;
+    bottom: -250px;
+    width: 50%;
+  }
+
+  @include onMediumDesktop {
+    bottom: -450px;
+    width: 65%;
+  }
+
+  @include onLargeDesktop {
+    bottom: -600px;
+    width: 65%;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: -1000px;
+    width: 70%;
+  }
+}
+
+
+.glow {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

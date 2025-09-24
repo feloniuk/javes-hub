@@ -1,0 +1,103 @@
+@import '@/styles/utils/mixins';
+
+.playerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem 1rem 1rem;
+  max-width: 219px;
+  width: 100%;
+  background-color: var(--white-10);
+  border-radius: var(--br-s);
+  border: 2px solid transparent;
+  transition: border var(--transition-d) var(--transition-tf);
+
+  @include onTablet {
+    padding: 1.5rem 1rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  @include onLaptop {
+    max-width: 248px;
+
+    &:nth-of-type(n+4) {
+      display: none;
+    }
+
+    &:hover {
+      border: 2px solid var(--light-crimson);
+      .avatarWrapper {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @include onLargeDesktop {
+    &:nth-of-type(n+4) {
+      display: flex;
+    }
+  }
+}
+
+.avatarWrapper {
+  margin-bottom: 1rem;
+  width: 72px;
+  height: 72px;
+  transform: scale(1);
+  transition: transform var(--transition-d) var(--transition-tf);
+  border-radius: 50%;
+
+  @include onTablet {
+    width: 56px;
+    height: 56px;
+  }
+
+  @include onMediumDesktop {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name {
+  @include font(var(--fs-body-l), 1.5, var(--fw-medium));
+  margin-bottom: 2px;
+  max-width: 80%;
+  text-align: center;
+  color: var(--white);
+
+  @include onTablet {
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+}
+
+.deals {
+  @include font(var(--fs-body-s), 1.5, var(--fw-regular));
+  margin-bottom: 1.5rem;
+  color: var(--white-50);
+
+  @include onTablet {
+    @include font(var(--fs-body-m), 1.5, var(--fw-regular));
+    margin-bottom: 1rem;
+  }
+}
+
+.ratingWrapper {
+  margin-top: auto;
+  width: 100px;
+  height: 25px;
+}
+
+.rating {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

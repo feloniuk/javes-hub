@@ -1,0 +1,50 @@
+[
+  {
+      "id": 1,
+      "logo": "/assets/home/games/wow-icon.svg",
+      "image": "/assets/home/games/wow.webp",
+      "name": "World of Warcraft"
+  },
+  {
+      "id": 2,
+      "logo": "/assets/home/games/diablo-icon.svg",
+      "image": "/assets/home/games/diablo.webp",
+      "name": "Diablo IV"
+  },
+  {
+      "id": 3,
+      "logo": "/assets/home/games/fc24-icon.svg",
+      "image": "/assets/home/games/fc24.webp",
+      "name": "EA FC 24"
+  },
+  {
+      "id": 4,
+      "logo": "/assets/home/games/mw-icon.svg",
+      "image": "/assets/home/games/mw.webp",
+      "name": "Call of Duty MWIII"
+  },
+  {
+      "id": 5,
+      "logo": "/assets/home/games/fortnite-icon.svg",
+      "image": "/assets/home/games/fortnite.webp",
+      "name": "Fortnite"
+  },
+  {
+      "id": 6,
+      "logo": "/assets/home/games/last-epoch-icon.svg",
+      "image": "/assets/home/games/last-epoch.webp",
+      "name": "Last Epoch"
+  },
+  {
+      "id": 7,
+      "logo": "/assets/home/games/division-icon.svg",
+      "image": "/assets/home/games/division.webp",
+      "name": "The Division 2"
+  },
+  {
+      "id": 8,
+      "logo": "/assets/home/games/helldivers-icon.svg",
+      "image": "/assets/home/games/helldivers.webp",
+      "name": "Helldivers 2"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+      "id": 1,
+      "logo": "/assets/games-in-ecosystem/wow-dragonflight.svg",
+      "image": "/assets/games-in-ecosystem/wow-dragonflight.webp",
+      "name": "WoW Dragonflight"
+  },
+  {
+      "id": 2,
+      "logo": "/assets/games-in-ecosystem/wow-cataclysm-classic.svg",
+      "image": "/assets/games-in-ecosystem/wow-cataclysm-classic.webp",
+      "name": "WoW: Cataclysm Classic"
+  },
+  {
+      "id": 3,
+      "logo": "/assets/games-in-ecosystem/wow-wotlk-classic.svg",
+      "image": "/assets/games-in-ecosystem/wow-wotlk-classic.webp",
+      "name": "WoW WotLK Classic"
+  },
+  {
+      "id": 4,
+      "logo": "/assets/games-in-ecosystem/wow-classic-era.svg",
+      "image": "/assets/games-in-ecosystem/wow-classic-era.webp",
+      "name": "WoW Classic Era"
+  },
+  {
+      "id": 5,
+      "logo": "/assets/games-in-ecosystem/diablo-4-boost.svg",
+      "image": "/assets/games-in-ecosystem/diablo-4-boost.webp",
+      "name": "Diablo 4 Boost"
+  },
+  {
+      "id": 6,
+      "logo": "/assets/games-in-ecosystem/the-elder-scrolls-online.svg",
+      "image": "/assets/games-in-ecosystem/the-elder-scrolls-online.webp",
+      "name": "The Elder Scrolls Online"
+  },
+  {
+      "id": 7,
+      "logo": "/assets/games-in-ecosystem/call-of-duty-mw.svg",
+      "image": "/assets/games-in-ecosystem/call-of-duty-mw.webp",
+      "name": "Call of Duty MW3 (2023)"
+  },
+  {
+      "id": 8,
+      "logo": "/assets/games-in-ecosystem/destiny-2.svg",
+      "image": "/assets/games-in-ecosystem/destiny-2.webp",
+      "name": "Destiny 2"
+  },
+  {
+      "id": 9,
+      "logo": "/assets/games-in-ecosystem/final-fantasy-XIV.svg",
+      "image": "/assets/games-in-ecosystem/final-fantasy-XIV.webp",
+      "name": "Final Fantasy XIV"
+  },
+  {
+      "id": 10,
+      "logo": "/assets/games-in-ecosystem/last-epoch.svg",
+      "image": "/assets/games-in-ecosystem/last-epoch.webp",
+      "name": "Last Epoch"
+  },
+  {
+      "id": 11,
+      "logo": "/assets/games-in-ecosystem/the-division-2.svg",
+      "image": "/assets/games-in-ecosystem/the-division-2.webp",
+      "name": "The Division 2"
+  },
+  {
+      "id": 12,
+      "logo": "/assets/games-in-ecosystem/lost-ark.svg",
+      "image": "/assets/games-in-ecosystem/lost-ark.webp",
+      "name": "Lost Ark"
+  },
+  {
+      "id": 13,
+      "logo": "/assets/games-in-ecosystem/path-of-exile.svg",
+      "image": "/assets/games-in-ecosystem/path-of-exile.webp",
+      "name": "Path of Exile"
+  },
+  {
+      "id": 14,
+      "logo": "/assets/games-in-ecosystem/hearthstone.svg",
+      "image": "/assets/games-in-ecosystem/hearthstone.webp",
+      "name": "Hearthstone"
+  },
+  {
+      "id": 15,
+      "logo": "/assets/games-in-ecosystem/new-world.svg",
+      "image": "/assets/games-in-ecosystem/new-world.webp",
+      "name": "New World"
+  },
+  {
+      "id": 16,
+      "logo": "/assets/games-in-ecosystem/ea-sports-fc.svg",
+      "image": "/assets/games-in-ecosystem/ea-sports-fc.webp",
+      "name": "EA sports FC"
+  },
+  {
+      "id": 17,
+      "logo": "/assets/games-in-ecosystem/helldivers-2.svg",
+      "image": "/assets/games-in-ecosystem/helldivers-2.webp",
+      "name": "Helldivers 2"
+  },
+  {
+      "id": 18,
+      "logo": "/assets/games-in-ecosystem/dota-2.svg",
+      "image": "/assets/games-in-ecosystem/dota-2.webp",
+      "name": "Dota 2"
+  },
+  {
+      "id": 19,
+      "logo": "/assets/games-in-ecosystem/escape-from-tarkov.svg",
+      "image": "/assets/games-in-ecosystem/escape-from-tarkov.webp",
+      "name": "Escape from Tarkov"
+  },
+  {
+      "id": 20,
+      "logo": "/assets/games-in-ecosystem/brawl-stars.svg",
+      "image": "/assets/games-in-ecosystem/brawl-stars.webp",
+      "name": "Brawl Stars"
+  },
+  {
+      "id": 21,
+      "logo": "/assets/games-in-ecosystem/raid-shadow-legends.svg",
+      "image": "/assets/games-in-ecosystem/raid-shadow-legends.webp",
+      "name": "Raid: Shadow Legends"
+  },
+  {
+      "id": 22,
+      "logo": "/assets/games-in-ecosystem/diablo-2-resurrected.svg",
+      "image": "/assets/games-in-ecosystem/diablo-2-resurrected.webp",
+      "name": "Diablo 2: Resurrected"
+  },
+  {
+      "id": 23,
+      "logo": "/assets/games-in-ecosystem/diablo-immortal.svg",
+      "image": "/assets/games-in-ecosystem/diablo-immortal.webp",
+      "name": "Diablo Immortal"
+  },
+  {
+      "id": 24,
+      "logo": "/assets/games-in-ecosystem/albion-online.svg",
+      "image": "/assets/games-in-ecosystem/albion-online.webp",
+      "name": "Albion Online"
+  },
+  {
+      "id": 25,
+      "logo": "/assets/games-in-ecosystem/fortnite.svg",
+      "image": "/assets/games-in-ecosystem/fortnite.webp",
+      "name": "Fortnite"
+  }
+]

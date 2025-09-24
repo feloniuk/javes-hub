@@ -1,0 +1,70 @@
+@import './reset.scss';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/functions';
+
+body {
+  color: var(--white-70);
+  background-color: var(--main-bg);
+
+  &.noScroll {
+    overflow: hidden;
+  }
+}
+
+.page-conteiner {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+}
+
+.heading-1 {
+  @include font(var(--fs-h1), 1.2, var(--fw-regular));
+  color: var(--white);
+}
+
+.heading-2 {
+  @include font(var(--fs-h2), 1.2, var(--fw-regular));
+}
+
+.heading-3 {
+  @include font(var(--fs-h3), 1.2, var(--fw-semi-bold));
+  color: var(--white);
+}
+
+.heading-4 {
+  @include font(var(--fs-h4), 1.2, var(--fw-semi-bold));
+  color: var(--white);
+}
+
+.container {
+  max-width: calc(1300px + #{container-padding('mobile')} * 2);
+  margin-inline: auto;
+  width: 100%;
+  padding: 0 #{container-padding('mobile')};
+
+  @include onTablet {
+    max-width: calc(1300px + #{container-padding('tablet')} * 2);
+    padding: 0 #{container-padding('tablet')};
+  }
+
+  @include onLaptop {
+    max-width: calc(1300px + #{container-padding('laptop')} * 2);
+    padding: 0 #{container-padding('laptop')};
+  }
+
+  @include onLargeDesktop {
+    max-width: calc(1300px + #{container-padding('desktop')} * 2);
+    padding: 0 #{container-padding('desktop')};
+  }
+}
+
+.bold {
+  color: var(--white);
+  font-weight: var(--fw-bold);
+}

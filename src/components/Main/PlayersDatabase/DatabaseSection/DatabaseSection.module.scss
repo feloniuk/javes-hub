@@ -1,0 +1,106 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 100px;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @include onTablet {
+    margin-bottom: 2.5rem;
+  }
+
+  @include onMediumDesktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+  }
+}
+
+.battonWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 128px;
+  background-color: var(--white-10);
+  border-radius: var(--br-s);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    height: 50%;
+    width: 100%;
+    background: var(--main-bg);
+    z-index: 0;
+    border-radius: var(--br-s);
+    border: 2px solid var(--light-crimson);
+    transition: top var(--transition-d) var(--transition-tf), border var(--transition-d) var(--transition-tf);
+
+    @include onMobile {
+      top: auto;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      transition: left var(--transition-d) var(--transition-tf), border var(--transition-d) var(--transition-tf);
+    }
+  }
+
+  &.active::after {
+    top: 50%;
+    border: 2px solid var(--apricot);
+
+    @include onMobile {
+      top: auto;
+      left: 50%;
+    }
+  }
+
+  @include onMobile {
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 453px;
+    max-height: 72px;
+    min-height: 64px;
+    width: 100%;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: max-content;
+  margin-inline: auto;
+
+  @include onTablet {
+    grid-template-columns: repeat(3, minmax(216px, 219px));
+    max-width: 100%;
+  }
+
+  @include onLaptop {
+    grid-template-columns: repeat(4, minmax(219px, 248px));
+  }
+
+  @include onLargeDesktop {
+    grid-template-columns: repeat(5, minmax(219px, 248px));
+    gap: 1rem;
+  }
+}

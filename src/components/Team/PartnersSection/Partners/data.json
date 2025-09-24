@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01",
+    "image": "/assets/team/partners/monster.svg",
+    "altText": "Mmonster logo"
+  },
+  {
+    "id": "02",
+    "image": "/assets/team/partners/digis.svg",
+    "altText": "Digis logo"
+  },
+  {
+    "id": "03",
+    "image": "/assets/team/partners/dust.svg",
+    "altText": "Dust ventures logo"
+  },
+  {
+    "id": "04",
+    "image": "/assets/team/partners/arounda.svg",
+    "altText": "Arounda logo"
+  },
+  {
+    "id": "05",
+    "image": "/assets/team/partners/m24.svg",
+    "altText": "M24 logo"
+  },
+  {
+    "id": "06",
+    "image": "/assets/team/partners/kairon.svg",
+    "altText": "Kairon Labs logo"
+  }
+]

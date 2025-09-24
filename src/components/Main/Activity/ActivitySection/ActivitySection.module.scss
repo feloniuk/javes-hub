@@ -1,0 +1,51 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 100px;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(165px, 216px));
+  gap: 0.75rem;
+  justify-content: center;
+
+  @include onTablet {
+    grid-template-columns: repeat(3, minmax(216px, 219px));
+  }
+
+  @include onLaptop {
+    grid-template-columns: repeat(4, minmax(219px, 248px));
+  }
+
+  @include onMediumDesktop {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+}
+
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.realTime {
+  @include font(var(--fs-body-m), 1.5, var(--fw-regular));
+  background: var(--orange-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+}

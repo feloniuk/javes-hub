@@ -1,0 +1,37 @@
+@import '@/styles/utils/mixins';
+
+.navLink {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+  color: #868796;
+  width: 100%;
+  border-radius: var(--br-s);
+  background-color: transparent;
+  transition: background-color var(--transition-d), color var(--transition-d);
+
+  @include onLaptop {
+    &:hover {
+      background-color: var(--white-10);
+      color: var(--white);
+    }
+  }
+}
+
+.linkIconWrapper {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.linkIcon {
+  min-width: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.linkText {
+  white-space: nowrap;
+}

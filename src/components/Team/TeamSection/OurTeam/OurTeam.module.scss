@@ -1,0 +1,95 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+
+  @include onLaptop {
+    padding-top: 128px;
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 75px;
+  }
+
+  @include onLargeDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+
+  @include onLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.heading {
+  @include onLaptop {
+    max-width: 120px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 150px;
+  }
+}
+
+.text {
+  @include font(var(--fs-body-l), 1.5, var(--fw-regular));
+  max-width: 672px;
+
+  @include onTablet {
+    font-size: 1.125rem;
+  }
+
+  @include onLaptop {
+    font-size: var(--fs-body-l);
+  }
+
+  @include onMediumDesktop {
+    max-width: 796px;
+  }
+}
+
+.mainTeamGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+
+  @include onLaptop {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 1.5rem;
+  }
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
+
+  @include onTablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include onLaptop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include onMediumDesktop {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include onLargeDesktop {
+    gap: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,141 @@
+@import '@/styles/utils/mixins';
+
+.tabNavigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: fit-content;
+  z-index: 2;
+}
+
+.tabMenu {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 1500px;
+  white-space: nowrap;
+  overflow-x: auto;
+  user-select: none;
+  scroll-behavior: smooth;
+
+  opacity: 0;
+  transform: translateX(-100px);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include onTablet {
+    gap: 2px;
+  }
+
+  @include onMediumDesktop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.tabButton {
+  @include font(var(--fs-body-m), 1.5, var(--fw-medium));
+  padding: 0.875rem 0.75rem;
+  border-bottom: 2px solid transparent;
+  color: var(--white-70);
+  transition: border-bottom var(--transition-d) var(--transition-tf);
+  user-select: none;
+  cursor: pointer;
+
+  @include onTablet {
+    padding: 0.875rem 1.5rem;
+  }
+
+  @include onLaptop {
+    &:hover {
+      border-bottom: 2px solid var(--white-15);
+    }
+  }
+
+  @include onMediumDesktop {
+    padding: 1rem 1.5rem;
+    font-size: var(--fs-body-l);
+    border-bottom: none;
+    border-left: 2px solid transparent;
+    transition: border-left var(--transition-d) var(--transition-tf);
+
+    &:hover {
+      border-bottom: none;
+      border-left: 2px solid var(--white-15);
+    }
+  }
+
+  &.active {
+    color: var(--white);
+  }
+}
+
+.tabIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: transform var(--transition-d) var(--transition-tf);
+  background-color: var(--light-crimson);
+
+  @include onMediumDesktop {
+    width: 2px;
+    height: 59px;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+  }
+}
+
+.scrollButtonLeft {
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  font-size: 2rem;
+  padding-left: 26px;
+  background: linear-gradient(to right, #000223 40%, transparent);
+  z-index: 10;
+  margin-left: -1rem;
+
+  @include onTablet {
+    margin-left: -3rem;
+  }
+
+  @include onLaptop {
+    margin-left: -3.5rem;
+  }
+}
+
+.scrollButtonRight {
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--white);
+  font-size: 2rem;
+  padding-right: 26px;
+  background: linear-gradient(to left, #000223 40%, transparent);
+  z-index: 10;
+  margin-right: -1rem;
+
+  @include onTablet {
+    margin-right: -3rem;
+  }
+
+  @include onLaptop {
+    margin-right: -3.5rem;
+  }
+}

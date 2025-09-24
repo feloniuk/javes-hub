@@ -1,0 +1,57 @@
+[
+  {
+    "id": "01",
+    "modifier": "card1",
+    "heading": ["Guild ", {"bold": "Tokens"}],
+    "text": "Guild Tokens are inspired by the DKP system (Dragon Kill Points) familiar to Old-School gamers, allowing gaming communities to create their own in-guild economies.",
+    "link": "/"
+  },
+
+  {
+    "id": "02",
+    "modifier": "card2",
+    "heading": ["Soulbound ", {"bold": "Gamer Profiles"}],
+    "text": "Thanks to Soulbound Tokens technology, we enable players to create their gaming profiles or digital gamer passports on Blockchain, preparing them for the Web3 world.",
+    "link": "/"
+  },
+
+  {
+    "id": "03",
+    "modifier": "card3",
+    "heading": ["Games Items ", {"bold": "Tokenization"}], 
+    "text": "The tokenization of in-game currencies and items, specifically in Web2 games, will become a reality through the Javes. Players will be able to exchange their game assets for specialized tokens that grant them the right to receive equivalent assets from the ecosystem.",
+    "link": "/"
+  },
+
+  {
+    "id": "04",
+    "modifier": "card4",
+    "heading": [{"bold": "Rewards"}, " for In-Game Challenges"],
+    "text": "Javes will introduce a feature that allows players to earn rewards for overcoming tough hard challenges in games through unique NFTs, thereby converting their gaming skill into the value of those NFTs.",
+    "link": "/"
+  },
+
+  {
+    "id": "05",
+    "modifier": "card5",
+    "heading": ["Collaboration with ", {"bold": "Web3 Gamers"}],
+    "text": "By creating a trading ecosystem, we are essentially building a market with millions of players that attracts Web3 game developers, opening up a wide range of collaboration opportunities.",
+    "link": "/"
+  },
+
+  {
+    "id": "06",
+    "modifier": "card6",
+    "heading": [{"bold": "JVS,"}, " the Token"],
+    "text": "The Javes token offers unique benefits to encourage purchases and is available through both Web3 and Web2 interfaces, making it accessible to players new to blockchain.",
+    "link": "/"
+  },
+
+  {
+    "id": "07",
+    "modifier": "card7",
+    "heading": [{"bold": "OnChain"}, " Wallet"],
+    "text": "Every player who consciously decides to join the Web3 world and use decentralized solutions will gain access to the Javes OnChain Wallet designed for gamers.",
+    "link": "/"
+  }
+]

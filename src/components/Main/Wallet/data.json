@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "id": "01",
+      "title": "Get Paid for Game Deals",
+      "text": "Effortlessly receive payments for selling in-game items, currencies, and services. The Ultimate Gamer Wallet makes converting your gaming achievements into real-world value simpler than ever.",
+      "image": "/assets/home/wallet/wallet-1.svg",
+      "altText": "A mobile gaming app interface displaying a Pro-Player's balance and transaction icons."
+    },
+    {
+      "id": "02",
+      "title": "Create Guild & Group Wallet",
+      "text": "Forge guild or group wallets for your team with split payment functionalities, streamlining team finances and ensuring equitable distribution of earnings.",
+      "image": "/assets/home/wallet/wallet-2.svg",
+      "altText": "A digital 'Guild Wallet' interface displaying balance, member payments, and a 'Mass Payout' button."
+    },
+    {
+      "id": "03",
+      "title": "Buy Games and Subscriptions",
+      "text": "Acquire game subscriptions and license keys, or execute in-game microtransactions directly through the wallet, enhancing your gaming experience with unparalleled convenience.",
+      "image": "/assets/home/wallet/wallet-3.svg",
+      "altText": "Mobile app screen showing a Pro-Player's balance and recent transactions with gaming icons."
+    },
+    {
+      "id": "04",
+      "title": "Personalize your Credit Card",
+      "text": "Create personalized virtual and physical credit cards tailored for gamers. The Ultimate Gamer Wallet caters to both your digital and physical payment needs, ensuring transactions are seamless, whether online or in-store.",
+      "image": "/assets/home/wallet/wallet-4.svg",
+      "altText": "A gamer's financial app interface with a Visa card and transaction history, flanked by payment service icons."
+    },
+    {
+      "id": "05",
+      "title": "Withdraw Funds your Way",
+      "text": "Enjoy flexible withdrawal options from your wallet. Whether you prefer transferring to a bank account or redeeming for gift cards, Ultimate Gamer Wallet offers straightforward and accessible ways to access your funds.",
+      "image": "/assets/home/wallet/wallet-5.svg",
+      "altText": "Mobile withdrawal interface displaying a Pro-Player's balance with options for bank, PayPal, and crypto."
+    }
+  ],
+
+  "navigation": [
+    "Get Paid for Game Deals",
+    "Create Guild & Group Wallet",
+    "Buy Games and Subscriptions",
+    "Personalize your Credit Card",
+    "Withdraw Funds your Way"
+  ]
+
+}

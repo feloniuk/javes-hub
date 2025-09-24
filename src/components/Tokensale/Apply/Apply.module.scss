@@ -1,0 +1,218 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 2;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.stepsBlock {
+  max-width: 343px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  position: relative;
+
+  @include onTablet {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-bottom: 1.5rem;
+    max-width: 672px;
+  }
+
+  @include onLaptop {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    margin-bottom: 2rem;
+    max-width: 912px;
+  }
+
+  @include onMediumDesktop {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+    max-width: 1024px;
+  }
+}
+
+.stepWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @include onTablet {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include onLaptop {
+    gap: 2rem;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid transparent;
+  border-radius: var(--br-m);
+  color: var(--white);
+  padding: 1.125rem;
+  max-width: 215px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  @include onLaptop {
+    max-width: 282px;
+    padding: 1.5rem;
+  }
+
+  @include onMediumDesktop {
+    max-width: 320px;
+  }
+}
+
+.step1 {
+  background-color: var(--geraldine);
+}
+
+.step2 {
+  border-color: var(--white-15);
+  color: var(--white-50);
+}
+
+.step3 {
+  border-color: var(--white-15);
+  color: var(--white-50);
+}
+
+.stepTitle {
+  font-size: var(--fs-h2);
+  color: inherit;
+
+  @include onTablet {
+    font-size: 2rem;
+  }
+
+  @include onLaptop {
+    font-size: var(--fs-h2);
+  }
+}
+
+.stepText {
+  font-size: 1.25rem;
+  color: inherit;
+
+  @include onMediumDesktop {
+    font-size: var(--fs-body-xl);
+  }
+}
+
+
+.btnWrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 215px;
+  width: 100%;
+  margin-inline: auto;
+
+  @include onTablet {
+    max-width: 200px;
+  }
+}
+
+.topActiveImg,
+.topDisabledImg,
+.bottomActiveImg,
+.bottomDisabledImg {
+  position: absolute;
+
+  @include onTablet {
+    width: 229px;
+    height: 64px;
+  }
+
+  @include onLaptop {
+    width: 319px;
+    height: 72px;
+  }
+
+  @include onMediumDesktop {
+    width: 354px;
+    height: 87px;
+  }
+}
+
+.topActiveImg,
+.topDisabledImg {
+  left: 4px;
+  bottom: 105px;
+
+  @include onTablet {
+    left: auto;
+    bottom: auto;
+    top: 8px;
+    right: 105px;
+  }
+
+  @include onLaptop {
+    top: 6px;
+    right: 147px;
+  }
+
+  @include onMediumDesktop {
+    top: 8px;
+    right: 170px;
+  }
+}
+
+.topActiveImg {
+  z-index: 2;
+}
+
+.topDisabledImg {
+  z-index: 1;
+}
+
+.bottomActiveImg,
+.bottomDisabledImg {
+  right: 4px;
+  top: 105px;
+
+  @include onTablet {
+    right: auto;
+    top: auto;
+    bottom: 8px;
+    left: 105px;
+  }
+
+  @include onLaptop {
+    bottom: 6px;
+    left: 147px;
+  }
+
+  @include onMediumDesktop {
+    bottom: 8px;
+    left: 170px;
+  }
+}
+
+.bottomActiveImg {
+  z-index: 2;
+}
+
+.bottomDisabledImg {
+  z-index: 1;
+}
+

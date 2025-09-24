@@ -1,0 +1,51 @@
+@import '@/styles/utils/mixins';
+
+.sectionButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem;
+  min-width: 165px;
+  min-height: 165px;
+  max-width: 219px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--purple-gradient);
+  border-radius: var(--br-s);
+
+  @include onTablet {
+    padding: 1.25rem;
+  }
+
+  @include onLaptop {
+    max-width: 248px;
+
+    &:hover {
+      .arrow {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transform: rotate(0);
+  transition: transform var(--transition-d) var(--transition-tf);
+}
+
+.text {
+  @include font(var(--fs-body-xl), 1.5, var(--fw-regular));
+
+  //temp styles
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}

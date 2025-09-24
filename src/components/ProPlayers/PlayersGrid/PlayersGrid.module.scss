@@ -1,0 +1,81 @@
+@import '@/styles/utils/mixins';
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 616px;
+    margin-inline: auto;
+  }
+
+  @include onLaptop {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 932px;
+  }
+
+  @include onMediumDesktop {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: none;
+  }
+
+  @include onLargeDesktop {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.btnWrapper {
+  max-width: 248px;
+  margin-inline: auto;
+  margin-top: 3rem;
+}
+
+.buttonMore {
+  @include font(1.125rem, 1.5, var(--fw-medium));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  width: 100%;
+  min-height: 56px;
+
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: var(--br-xs);
+  transition: background-color var(--transition-d) var(--transition-tf);
+
+  &::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url('/assets/home/hero/hero-arrow.svg');
+    background-size: cover;
+    transform: rotate(45deg);
+    transition: transform var(--transition-d) var(--transition-tf);;
+  }
+
+  &.loading::after {
+    display: none;
+  }
+
+  @include onLaptop {
+    &:hover {
+      background-color: var(--geraldine);
+    }
+
+    &:hover::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--white-50);
+    opacity: 0.8;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,10 @@
+$container-padding-map: (
+  'mobile': 16px,
+  'tablet': 48px,
+  'laptop': 56px,
+  'desktop': 70px
+);
+
+@function container-padding($key) {
+  @return map-get($container-padding-map, $key);
+}

@@ -1,0 +1,112 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+  scroll-margin-top: 100px;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+    scroll-margin-top: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+    scroll-margin-top: 150px;
+  }
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+
+  @include onMediumDesktop {
+    margin-bottom: 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include onTablet {
+    max-width: 750px;
+    margin-inline: auto;
+  }
+
+  @include onLaptop {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+    gap: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include onLaptop {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  @include onMediumDesktop {
+    max-width: 384px;
+  }
+}
+
+
+.text {
+  @include font(1rem, 1.5, var(--fw-regular));
+  color: var(--white);
+  order: 1;
+  max-width: 500px;
+
+  @include onMediumDesktop {
+    font-size: 1.125rem;
+  }
+}
+
+.image {
+  width: 73%;
+  height: auto;
+  max-width: 350px;
+
+  @include onTablet {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  @include onMediumDesktop {
+    max-width: 360px;
+  }
+}
+
+.coin {
+  order: 0;
+
+  @include onTablet {
+    order: 1;
+  }
+}
+
+.flagContent {
+  @include onMediumDesktop {
+    transform: translateY(-15px);
+  }
+}
+
+.flag {
+  @include onLaptop {
+    transform: scale(1.1);
+  }
+}
+

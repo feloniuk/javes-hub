@@ -1,0 +1,90 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+  scroll-margin-top: 100px;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+    scroll-margin-top: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+    scroll-margin-top: 150px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  max-width: 560px;
+  margin-inline: auto;
+
+  @include onLaptop {
+    flex-direction: row;
+    max-width: 832px;
+    gap: 4.75rem;
+  }
+
+  @include onMediumDesktop {
+    max-width: 1010px;
+  }
+}
+
+.contentWrapper {
+  @include onLaptop {
+    max-width: 380px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 456px;
+  }
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  @include font(1rem, 1.5, var(--fw-regular));
+  color: var(--white);
+
+  @include onMediumDesktop {
+    font-size: 1.125rem;
+  }
+}
+
+.imageWrapper {
+  margin-inline: auto;
+  max-width: 280px;
+  max-height: 272px;
+  width: 100%;
+  height: 100%;
+
+  @include onTablet {
+    max-width: 375px;
+    max-height: 365px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 464px;
+    max-height: 451px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(1.4);
+  pointer-events: none;
+
+  @include onLaptop {
+    transform: scale(1.4) translateY(10px);
+  }
+}

@@ -1,0 +1,30 @@
+@import '@/styles/utils/mixins';
+
+.cell {
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+  &:nth-child(1),
+  &:nth-child(3),
+  &:nth-child(5),
+  &:nth-child(7),
+  &:nth-child(8),
+  &:nth-child(10) { 
+    width: 198.4px; 
+  }
+
+  &:nth-child(2) { 
+    width: 179.2px; 
+  }
+
+  &:nth-child(4),
+  &:nth-child(6),
+  &:nth-child(9),
+  &:nth-child(11) { 
+    width: 192px; 
+  }
+
+  &:nth-child(12) { 
+    width: 198.4px;
+    border-right: none;
+  }
+}

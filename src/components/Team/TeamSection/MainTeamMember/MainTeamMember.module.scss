@@ -1,0 +1,186 @@
+@import '@/styles/utils/mixins';
+
+.mainMemberCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include onTablet {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+
+  @include onLaptop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card2,
+.card4,
+.card6 {
+  @include onTablet {
+    grid-template-columns: 2fr 1fr;
+
+    & .imagesWrapper {
+      order: 2;
+    }
+    
+    & .mainInfo {
+      order: 1;
+
+      & .infoHeading .mainNameBlock {
+        text-align: right;
+        order: 2;
+      }
+
+      & .infoText {
+        text-align: right;
+        order: 1;
+      }
+    }
+  }
+
+  @include onLaptop {
+    grid-template-columns: 1fr 1fr;
+
+    & .imagesWrapper {
+      order: 1;
+    }
+    
+    & .mainInfo {
+      order: 2;
+
+      & .infoHeading .mainNameBlock {
+        text-align: left;
+        order: 0;
+      }
+
+      & .infoText {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.card3,
+.card4 {
+  @include onLaptop {
+    & .imagesWrapper {
+      order: 2;
+    }
+    
+    & .mainInfo {
+      order: 1;
+
+      & .infoHeading .mainNameBlock {
+        text-align: right;
+        order: 2;
+      }
+
+      & .infoText {
+        text-align: right;
+        order: 1;
+      }
+    }
+  }
+}
+
+.imagesWrapper {
+  position: relative;
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
+}
+
+.mainImageWrapper,
+.hoverImageWrapper {
+  width: 65%;
+  max-width: 350px;
+  border-radius: var(--br-s);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+
+  @include onTablet {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.mainMemberPhoto {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--br-s);
+}
+
+.hoverImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+
+  @include onLaptop {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.infoHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mainName {
+  @include font(var(--fs-body-l), 1.5, var(--fw-medium));
+  color: var(--white);
+  margin-bottom: 0.25rem;
+
+  @include onLaptop {
+    font-size: var(--fs-body-m);
+  }
+
+  @include onMediumDesktop {
+    font-size: var(--fs-body-l);
+  }
+}
+
+.mainPosition {
+  @include font(var(--fs-body-s), 1.5, var(--fw-regular));
+  color: var(--white-50);
+}
+
+.linkedinLink {
+  width: 34px;
+  height: 34px;
+  padding: 0 0 10px 10px;
+  color: var(--white-50);
+
+  @include onLaptop {
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
+
+.linkedinIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.infoText {
+  @include font(var(--fs-body-s), 1.5, var(--fw-regular));
+
+  @include onMediumDesktop {
+    font-size: var(--fs-body-m);
+  }
+}

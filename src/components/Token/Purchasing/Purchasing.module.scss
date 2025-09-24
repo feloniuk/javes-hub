@@ -1,0 +1,97 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+
+  @include onLaptop {
+    padding-bottom: 120px;
+  }
+
+  @include onMediumDesktop {
+    padding-bottom: 150px;
+  }
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  max-width: 300px;
+
+  @include onMobile {
+    max-width: 400px;
+  }
+
+  @include onTablet {
+    max-width: 470px;
+  }
+
+  @include onMediumDesktop {
+    max-width: 624px;
+    margin-bottom: 2rem;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+
+  @include onLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+}
+
+.imageWrapper {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+
+  @include onTablet {
+    max-width: 560px;
+  }
+
+  @include onLaptop {
+    order: 2;
+    max-width: 55.5%;
+  }
+
+  @include onMediumDesktop {
+    max-width: 776px;
+  }
+
+  @include onLargeDesktop {
+    flex-shrink: 0;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.text {
+  @include font(var(--fs-body-l), 1.5, var(--fw-regular));
+  color: var(--white);
+  max-width: 560px;
+
+  @include onLaptop {
+    order: 1;
+    max-width: 35%;
+    font-size: var(--fs-body-m);
+  }
+
+  @include onMediumDesktop {
+    font-size: var(--fs-body-l);
+    max-width: 385px;
+  }
+
+  @include onLargeDesktop {
+    max-width: none;
+  }
+}

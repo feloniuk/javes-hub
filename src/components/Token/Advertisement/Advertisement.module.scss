@@ -1,0 +1,57 @@
+@import '@/styles/utils/mixins';
+
+.section {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+
+  @include onLaptop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.75rem;
+    margin-bottom: 6.25rem;
+  }
+}
+
+.text {
+  @include font(var(--fs-body-l), 1.5, var(--fw-regular));
+  max-width: 672px;
+
+  @include onLaptop {
+    font-size: var(--fs-body-m);
+  }
+
+  @include onMediumDesktop {
+    font-size: var(--fs-body-l);
+    max-width: 796px;
+  }
+}
+
+.imageWrapper {
+  max-width: 845px;
+  min-width: 100%;
+  height: auto;
+  margin-inline: -1rem;
+
+  @include onMobile {
+    margin-inline: auto;
+  }
+
+  @include onMediumDesktop {
+    max-width: 1100px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "01",
+    "name": "Tote Fernández-Bravo",
+    "text": "Seasoned Blockchain professional, expert in analysis, management and execution. More than 100 M&A and Crypto deals. Started his career in Investment Banking in 2011 and moved to the Crypto space in 2017.",
+    "linkedin": "#",
+    "xLink": "#",
+    "positionsList": [
+      { "id": "001", "title": "Managing Director at", "logo": "/assets/team/advisors/magic-square.svg", "logoAltText": "Magic Square logo" },
+      { "id": "002", "title": "Ex. Managing Director at", "logo": "/assets/team/advisors/dao-maker.svg", "logoAltText": "DAO maker logo" }
+    ]
+  },
+  {
+    "id": "02",
+    "name": "Anton Paisov",
+    "text": "Seasoned Blockchain professional, expert in analysis, management and execution. More than 100 M&A and Crypto deals. Started his career in Investment Banking in 2011 and moved to the Crypto space in 2017.",
+    "linkedin": "#",
+    "xLink": null,
+    "positionsList": [
+      { "id": "001", "title": "Ex. Partner Engineer at", "logo": "/assets/team/advisors/near.svg", "logoAltText": "Near logo" },
+      { "id": "002", "title": "Ex. Head of Integrations at", "logo": "/assets/team/advisors/aurora.svg", "logoAltText": "Aurora logo" }
+    ]
+  },
+  {
+    "id": "03",
+    "name": "Daniel Paez",
+    "text": "Seasoned Blockchain professional, expert in analysis, management and execution. More than 100 M&A and Crypto deals. Started his career in Investment Banking in 2011 and moved to the Crypto space in 2017.",
+    "linkedin": "#",
+    "xLink": null,
+    "positionsList": [
+      { "id": "001", "title": "VP of Revenue", "logo": "/assets/team/advisors/immutable.svg", "logoAltText": "Immutable logo" },
+      { "id": "002", "title": "Ex. Senior Manager at", "logo": "/assets/team/advisors/activision.svg", "logoAltText": "Activision blizzard logo" }
+    ]
+  },
+  {
+    "id": "04",
+    "name": "Gustavo Hess",
+    "text": "Seasoned Blockchain professional, expert in analysis, management and execution. More than 100 M&A and Crypto deals. Started his career in Investment Banking in 2011 and moved to the Crypto space in 2017.",
+    "linkedin": "#",
+    "xLink": null,
+    "positionsList": [
+      { "id": "001", "title": "Business Developer at", "logo": "/assets/team/advisors/kairon.svg", "logoAltText": "Kairon Labs logo" }
+    ]
+  },
+  {
+    "id": "05",
+    "name": "Kirill Evans",
+    "text": "Seasoned Blockchain professional, expert in analysis, management and execution. More than 100 M&A and Crypto deals. Started his career in Investment Banking in 2011 and moved to the Crypto space in 2017.",
+    "linkedin": "#",
+    "xLink": "#",
+    "positionsList": [
+      { "id": "001", "title": "CEO & Founder of", "logo": "/assets/team/advisors/dust-space.svg", "logoAltText": "Dust Space logo" },
+      { "id": "002", "title": "Leader of", "logo": "/assets/team/advisors/crypto-community.svg", "logoAltText": "Crypto Community logo" }
+    ]
+  },
+  {
+    "id": "06",
+    "name": "Guilherme Maia",
+    "text": "Seasoned Blockchain professional, expert in analysis, management and execution. More than 100 M&A and Crypto deals. Started his career in Investment Banking in 2011 and moved to the Crypto space in 2017.",
+    "linkedin": "#",
+    "xLink": null,
+    "positionsList": [
+      { "id": "001", "title": "Senior Legal Counsel at", "logo": "/assets/team/advisors/bcas.svg", "logoAltText": "BCAS log" },
+      { "id": "002", "title": "Professor at", "logo": "/assets/team/advisors/coimbra-school.svg", "logoAltText": "Coimbra Business School logo" }
+    ]
+  }
+]

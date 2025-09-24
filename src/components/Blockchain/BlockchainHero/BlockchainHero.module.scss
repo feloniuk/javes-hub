@@ -1,0 +1,114 @@
+@import '@/styles/utils/mixins';
+
+.sectionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  min-height: 100vh;
+  margin-bottom: 3.75rem;
+}
+
+.contentWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  min-height: 100vh;
+  max-height: 120vh;
+  height: 100%;
+  width: 100%;
+}
+
+.heading {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+
+  opacity: 0.01;
+  transform: translateY(-50px);
+
+  @media (min-width: 1920px) {
+    font-size: 5rem;
+  }
+}
+
+.gradientTextLeft {
+  font-weight: var(--fw-bold);
+  background: linear-gradient(165deg, #FDAC7D -15.51%, #FFF 68.78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientTextRight {
+  font-weight: var(--fw-bold);
+  background: linear-gradient(330deg, #FDAC7D -15.51%, #FFF 68.78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.greyText {
+  color: var(--white-70);
+}
+
+.btnWrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 166px;
+  width: 100%;
+
+  opacity: 0.01;
+  transform: translateY(50px);
+
+  @media (min-width: 1920px) {
+    max-width: 200px;
+  }
+}
+
+.animationWrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateZ(0);
+  margin-inline: auto;
+  will-change: transform;
+
+  @include onTablet {
+    top: 52%;
+  }
+}
+
+.animation {
+  width: 100vw;
+  height: auto;
+  max-width: 2000px;
+  margin-inline: auto;
+  min-width: 1000px;
+  object-position: center;
+
+  @include onTablet {
+    min-width: 1400px;
+  }
+
+  @media (max-height: 601px) {
+    min-width: 0;
+  }
+}
+
+.gradient {
+  width: 100vw;
+  height: 200px;
+  background: linear-gradient(360deg, transparent 0%, #000223 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}

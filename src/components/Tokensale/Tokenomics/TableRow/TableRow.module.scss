@@ -1,0 +1,97 @@
+@import '@/styles/utils/mixins';
+
+$row-colors: #9351F4, #FFE16F, #FF5252, #6569F0, #8FDAFF, #66FFB3, #9AFF68, #FF6DF4, #FFA0C9;
+
+.tableRows {
+  border-radius: var(--br-xs);
+  border: 2px solid var(--white-15);
+  opacity: 1;
+  transition: opacity var(--transition-d) ease;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @each $color in $row-colors {
+    $index: index($row-colors, $color);
+    &:nth-child(#{$index + 1}) .rowItem .rowItemColor {
+      background-color: $color;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    transition: opacity var(--transition-d) ease;
+  }
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: 180px 150px 150px 123px;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+  }
+
+  @include onLaptop {
+    grid-template-columns: 237px 196px 196px 159px;
+  }
+
+  @include onLargeDesktop {
+    grid-template-columns: 193px 159px 159px 129px;
+  }
+}
+
+.rowItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:first-child {
+    color: var(--white);
+    justify-content: flex-start;
+    gap: 0.625rem;
+    margin-bottom: 0.75rem;
+
+    @include onTablet {
+      margin-bottom: 0;
+    }
+  }
+
+  @include onTablet {
+    padding: 0.625rem 1rem;
+    position: relative;
+    gap: 0.625rem;
+  
+    &:not(:last-child)::after {
+      content: '';
+      width: 1px;
+      height: 30px;
+      background-color: var(--white-15);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.rowItemLabel {
+  color: var(--white);
+  opacity: 0.4;
+
+  @include onTablet {
+    display: none;
+  }
+}
+
+.rowItemColor {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.disabled {
+  opacity: 0.5;
+  transition: opacity var(--transition-d) ease;
+}

@@ -1,0 +1,56 @@
+@import '@/styles/utils/mixins';
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  max-width: 219px;
+  width: 100%;
+  flex-shrink: 0;
+
+  @include onLaptop {
+    &:hover .title {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
+  @include onMediumDesktop {
+    max-width: 248px;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--br-s);
+  margin-bottom: 0.75rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--br-s);
+}
+
+.labelBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.labelIcon {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
+
+.date {
+  @include font(var(--fs-body-s));
+  color: var(--white-50);
+}
+
+.title {
+  @include font(var(--fs-body-l), 1.5, var(--fw-medium));
+  color: var(--white);
+}

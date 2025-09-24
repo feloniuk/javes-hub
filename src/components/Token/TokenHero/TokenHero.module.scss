@@ -1,0 +1,133 @@
+@import '@/styles/utils/mixins';
+
+.sectionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  min-height: 100vh;
+  margin-bottom: 3.75rem;
+}
+
+.contentWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  min-height: 100vh;
+  max-height: 120vh;
+  height: 100%;
+  width: 100%;
+  padding-top: 45%;
+
+  @include onTablet {
+    padding-top: 230px;
+  }
+
+  @include onLaptop {
+    padding-top: 180px;
+  }
+
+  @media (min-width: 1920px) {
+    padding-top: 210px;
+  }
+}
+
+.heading {
+  font-weight: var(--fw-bold);
+  text-align: center;
+  background: linear-gradient(178deg, #FDAC7D -15.51%, #FFF 68.78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+
+  opacity: 0.01;
+  transform: translateX(-50px);
+
+  @media (min-width: 1920px) {
+    font-size: 5rem;
+  }
+}
+
+.subHeading {
+  margin-bottom: 250px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+
+  opacity: 0.01;
+  transform: translateX(50px);
+
+  @include onTablet {
+    margin-bottom: 270px;
+  }
+  
+  @include onLaptop {
+    margin-bottom: 250px;
+  }
+
+  @include onMediumDesktop {
+    margin-bottom: 327px;
+  }
+
+  @media (min-width: 1920px) {
+    margin-bottom: 400px;
+  }
+}
+
+.btnWrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 166px;
+  width: 100%;
+
+  opacity: 0.01;
+  transform: translateY(50px);
+
+  //temp styles for button
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (min-width: 1920px) {
+    max-width: 200px;
+  }
+}
+
+//temp label under button
+.tempText {
+  font-size: 12px;
+}
+
+.animationWrapper {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  margin-inline: auto;
+
+  @include onLaptop {
+    top: 200px;
+  }
+  
+}
+
+.animation {
+  width: 100%;
+  height: 100%;
+  max-width: 2000px;
+  max-height: 1000px;
+  margin-inline: auto;
+  min-width: 800px;
+  object-position: center;
+
+  @include onTablet {
+    min-width: 1024px;
+  }
+}

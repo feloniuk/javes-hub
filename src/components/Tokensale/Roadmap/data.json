@@ -1,0 +1,71 @@
+{
+  "months": [
+    { "id": 1, "name": "Jan \u002724" },
+    { "id": 2, "name": "Feb \u002724" },
+    { "id": 3, "name": "Mar \u002724" },
+    { "id": 4, "name": "Apr \u002724" },
+    { "id": 5, "name": "May \u002724" },
+    { "id": 6, "name": "Jun \u002724" },
+    { "id": 7, "name": "Jul \u002724" },
+    { "id": 8, "name": "Aug \u002724" },
+    { "id": 9, "name": "Sep \u002724" },
+    { "id": 10, "name": "Oct \u002724" },
+    { "id": 11, "name": "Nov \u002724" },
+    { "id": 12, "name": "Dec \u002724" }
+  ],
+
+  "Module1": [
+    { "id": 1, "className": "firstRowBar", "startDay": "2024-01-01", "endDay": "2024-01-31", "name": "Event 1", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 2, "className": "firstRowBar", "startDay": "2024-02-01", "endDay": "2024-02-28", "name": "Event 2", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 3, "className": "firstRowBar", "startDay": "2024-03-01", "endDay": "2024-03-31", "name": "Event 3", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 9, "className": "firstRowBar", "startDay": "2024-05-01", "endDay": "2024-07-20", "name": "Event 9", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 4, "className": "firstRowBar", "startDay": "2024-08-01", "endDay": "2024-08-31", "name": "Event 4", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 5, "className": "firstRowBar", "startDay": "2024-09-01", "endDay": "2024-09-30", "name": "Event 5", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 6, "className": "firstRowBar", "startDay": "2024-10-01", "endDay": "2024-10-31", "name": "Event 6", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 7, "className": "firstRowBar", "startDay": "2024-11-01", "endDay": "2024-11-30", "name": "Event 7", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 8, "className": "firstRowBar", "startDay": "2024-12-01", "endDay": "2024-12-31", "name": "Event 8", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" }
+  ],
+
+  "Module2": [
+    { "id": 1, "className": "secondRowBar", "startDay": "2024-01-12", "endDay": "2024-02-10", "name": "Event 1", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 2, "className": "secondRowBar", "startDay": "2024-02-15", "endDay": "2024-03-10", "name": "Event 2", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 3, "className": "secondRowBar", "startDay": "2024-03-25", "endDay": "2024-04-25", "name": "Event 3", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 4, "className": "secondRowBar", "startDay": "2024-05-05", "endDay": "2024-05-31", "name": "Event 4", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 5, "className": "secondRowBar", "startDay": "2024-07-05", "endDay": "2024-07-31", "name": "Event 5", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 6, "className": "secondRowBar", "startDay": "2024-09-15", "endDay": "2024-10-15", "name": "Event 6", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 7, "className": "secondRowBar", "startDay": "2024-11-20", "endDay": "2024-12-31", "name": "Event 7", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" }
+  ],
+
+  "Module3": [
+    { "id": 1, "className": "thirdRowBar", "startDay": "2024-01-10", "endDay": "2024-01-15", "name": "Event 1", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 2, "className": "thirdRowBar", "startDay": "2024-02-10", "endDay": "2024-02-20", "name": "Event 2", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 3, "className": "thirdRowBar", "startDay": "2024-03-01", "endDay": "2024-03-07", "name": "Event 3", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 4, "className": "thirdRowBar", "startDay": "2024-08-01", "endDay": "2024-08-31", "name": "Event 4", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 5, "className": "thirdRowBar", "startDay": "2024-09-05", "endDay": "2024-10-15", "name": "Event 5", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 7, "className": "thirdRowBar", "startDay": "2024-11-01", "endDay": "2024-11-20", "name": "Event 7", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 8, "className": "thirdRowBar", "startDay": "2024-12-01", "endDay": "2024-12-31", "name": "Event 8", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" }
+  ],
+
+  "Module4": [
+    { "id": 1, "className": "fourthRowBar", "startDay": "2024-01-01", "endDay": "2024-01-31", "name": "Event 1", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 2, "className": "fourthRowBar", "startDay": "2024-02-01", "endDay": "2024-02-28", "name": "Event 2", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 3, "className": "fourthRowBar", "startDay": "2024-03-01", "endDay": "2024-03-31", "name": "Event 3", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 9, "className": "fourthRowBar", "startDay": "2024-05-01", "endDay": "2024-07-20", "name": "Event 9", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 4, "className": "fourthRowBar", "startDay": "2024-08-01", "endDay": "2024-08-31", "name": "Event 4", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 5, "className": "fourthRowBar", "startDay": "2024-09-01", "endDay": "2024-09-30", "name": "Event 5", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 6, "className": "fourthRowBar", "startDay": "2024-10-01", "endDay": "2024-10-31", "name": "Event 6", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 7, "className": "fourthRowBar", "startDay": "2024-11-01", "endDay": "2024-11-30", "name": "Event 7", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 8, "className": "fourthRowBar", "startDay": "2024-12-01", "endDay": "2024-12-31", "name": "Event 8", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" }
+  ],
+
+  "Module5": [
+    { "id": 1, "className": "fifthRowBar", "startDay": "2024-01-01", "endDay": "2024-02-10", "name": "Event 1", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 3, "className": "fifthRowBar", "startDay": "2024-03-01", "endDay": "2024-03-31", "name": "Event 3", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 9, "className": "fifthRowBar", "startDay": "2024-05-01", "endDay": "2024-07-20", "name": "Event 9", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 4, "className": "fifthRowBar", "startDay": "2024-08-01", "endDay": "2024-08-31", "name": "Event 4", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 5, "className": "fifthRowBar", "startDay": "2024-09-01", "endDay": "2024-09-30", "name": "Event 5", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 6, "className": "fifthRowBar", "startDay": "2024-10-01", "endDay": "2024-10-31", "name": "Event 6", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 7, "className": "fifthRowBar", "startDay": "2024-11-01", "endDay": "2024-11-30", "name": "Event 7", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" },
+    { "id": 8, "className": "fifthRowBar", "startDay": "2024-12-01", "endDay": "2024-12-31", "name": "Event 8", "startTooltip": "2024-01-01", "endTooltip": "2024-01-31" }
+  ]
+}

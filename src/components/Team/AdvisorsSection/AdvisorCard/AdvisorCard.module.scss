@@ -1,0 +1,73 @@
+@import '@/styles/utils/mixins';
+
+.card {
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.cardHeadingBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.name {
+  @include font(1.125rem, 1.5, var(--fw-medium));
+  color: var(--white);
+}
+
+.mediaLinksBlock {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mediaLink {
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  color: var(--white-50);
+
+  @include onLaptop {
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
+
+.mediaIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.text {
+  @include font(1rem, 1.5, var(--fw-regular));
+  margin-bottom: 2rem;
+}
+
+.experienceBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.position {
+  @include font(0.875rem, 1.5, var(--fw-regular));
+  max-width: 95px;
+}
+
+.logoWrapper {
+  width: max-content;
+  height: auto;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

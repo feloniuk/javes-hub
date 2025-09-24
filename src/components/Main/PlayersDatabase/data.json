@@ -1,0 +1,26 @@
+[
+  {
+      "id": 1,
+      "avatar": "/assets/home/players/reborn-team-avatar.webp",
+      "name": "Reborn Team",
+      "deals": 2068
+  },
+  {
+      "id": 2,
+      "avatar": "/assets/home/players/sefuz-club-avatar.webp",
+      "name": "Sefuz Club",
+      "deals": 689
+  },
+  {
+      "id": 3,
+      "avatar": "/assets/home/players/pollka-avatar.webp",
+      "name": "Pollka",
+      "deals": 522
+  },
+  {
+      "id": 4,
+      "avatar": "/assets/home/players/the-necro-avatar.webp",
+      "name": "TheNecro",
+      "deals": 155
+  }
+]

@@ -1,0 +1,468 @@
+@import '@/styles/utils/mixins';
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.75rem;
+  width: 100%;
+  height: auto;
+  min-height: 165px;
+  border-radius: var(--br-s);
+  overflow: hidden;
+  z-index: 1;
+
+  @include onTablet {
+    padding: 0.875rem;
+    min-height: 160px;
+  }
+
+  @include onLaptop {
+    padding: 0;
+  }
+
+  &.active {
+    grid-column: span 2;
+    padding: 1.5rem;
+    min-height: 280px;
+
+    @include onTablet {
+      grid-row: span 2;
+    }
+
+    @include onLaptop {
+      min-height: 0;
+      width: 300px;
+      height: 300px;
+    }
+
+    @include onMediumDesktop {
+      width: 320px;
+      height: 320px;
+    }
+
+    .cardText {
+      opacity: 1;
+      height: 100%;
+      transform: translateX(0);
+      transition: height var(--transition-d) var(--transition-tf),
+                  opacity var(--transition-d) var(--transition-tf),
+                  transform var(--transition-d) var(--transition-tf);
+
+      @include onLaptop {
+        max-height: 182px;
+        transition: max-height 0.7s var(--transition-tf),
+                    opacity 0.7s var(--transition-tf),
+                    transform 0.7s var(--transition-tf);
+        transition-delay: 0.2s;
+      }
+    }
+
+    .cardLink {
+      transform: translateX(0);
+
+      @include onLaptop {
+        transition: transform 0.7s var(--transition-tf);
+      }
+    }
+
+    .cardLinkText {
+      opacity: 1;
+
+      @include onLaptop {
+        transition: opacity 0.7s var(--transition-tf);
+      }
+    }
+
+    .arrow {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.number {
+  margin-bottom: 0.5rem;
+  @include font(var(--fs-body-l), 1.2, var(--fw-regular));
+  color: var(--white-50);
+
+  @include onLaptop {
+    display: none;
+  }
+}
+
+.cardTitle {
+  margin-bottom: 1rem;
+  @include font(var(--fs-body-xl), 1.2, var(--fw-regular));
+
+  @include onTablet {
+    margin-bottom: 0.5rem;
+  }
+
+  @include onLaptop {
+    font-size: 1.5rem;
+  }
+
+  @include onMediumDesktop {
+    margin-bottom: 1rem;
+  }
+}
+
+.cardText {
+  margin-bottom: 0.5rem;
+  height: 0;
+  font-size: var(--fs-body-m);
+  opacity: 0;
+  transform: translateX(-50px);
+  user-select: none;
+
+  @include onLaptop {
+    transform: translateX(-10px);
+    max-height: 0px;
+    font-size: var(--fs-body-s);
+    transition: max-height var(--transition-d) var(--transition-tf),
+                opacity var(--transition-d) var(--transition-tf),
+                transform var(--transition-d) var(--transition-tf);
+  }
+}
+
+.cardLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  transform: translateX(-125px);
+  transition: transform var(--transition-d) var(--transition-tf);
+
+  @include onTablet {
+    transform: translateX(-130px);
+  }
+
+  @include onLaptop {
+    transform: translateX(-145px);
+    transition: transform var(--transition-d) var(--transition-tf);
+  }
+}
+
+.cardLinkText {
+  @include font(var(--fs-body-m), 1.5, var(--fw-medium));
+  color: var(--white);
+  opacity: 0;
+  transition: opacity var(--transition-d) var(--transition-tf);
+  white-space: nowrap;
+}
+
+.arrow {
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(0);
+  transition: transform var(--transition-d) var(--transition-tf);
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.moon {
+  display: none;
+
+  @include onLaptop {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #FBBE7E;
+    border-radius: 100%;
+    z-index: 0;
+  }
+
+  @include onMediumDesktop {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  border: 1px solid var(--white-50);
+  background: #12122A;
+
+  @include onLaptop {
+    padding: 0.875rem;
+    width: 156px;
+    height: 156px;
+    aspect-ratio: 1 / 1;
+    transition: width var(--transition-d) var(--transition-tf),
+                height var(--transition-d) var(--transition-tf);
+  }
+
+  & .cardTitle {
+    @include onLaptop {
+      font-size: 1.125rem;
+    }
+  }
+
+  @include onMediumDesktop {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+.card5,
+.card6,
+.card7 {
+  border: 1px solid var(--light-crimson);
+  background: #1A1B39;
+
+  @include onLaptop {
+    padding: 1.375rem;
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    transition: width var(--transition-d) var(--transition-tf),
+                height var(--transition-d) var(--transition-tf);
+  }
+
+  @include onMediumDesktop {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+.card1 {
+  order: 1;
+
+  & + .moon {
+    top: 108px;
+    left: 425px;
+    transform: translate(0, 0);
+    transition: transform var(--transition-d) var(--transition-tf);
+
+    @include onMediumDesktop {
+      top: 86px;
+    }
+  }
+
+  @include onLaptop {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include onMediumDesktop {
+    left: 370px;
+    transform: translateX(0);
+  }
+
+  &.active + .moon {
+    transform: translate(0, 168px);
+    transition: transform 0.7s var(--transition-tf);
+
+    @include onMediumDesktop {
+      transform: translate(61px, 183px);
+    }
+  }
+}
+
+.card2 {
+  order: 2;
+
+  & + .moon {
+    top: 150px;
+    right: 135px;
+    transform: translate(0, 0);
+    transition: transform var(--transition-d) var(--transition-tf);
+
+    @include onMediumDesktop {
+      right: 122px;
+    }
+  }
+
+  @include onLaptop {
+    position: absolute;
+    top: 100px;
+    right: 41px;
+  }
+
+  @include onMediumDesktop {
+    top: 138px;
+    right: 45px;
+  }
+
+  &.active + .moon {
+    transform: translate(-173px, 64px);
+    transition: transform 0.7s var(--transition-tf);
+
+    @include onMediumDesktop {
+      transform: translate(-183px, 102px);
+    }
+  }
+}
+
+.card3 {
+  order: 3;
+
+  & + .moon {
+    bottom: 351px;
+    right: 32px;
+    transform: translate(0, 0);
+    transition: transform var(--transition-d) var(--transition-tf);
+
+    @include onMediumDesktop {
+      bottom: 400px;
+    }
+  }
+
+  @include onLaptop {
+    position: absolute;
+    bottom: 350px;
+    right: -15px;
+  }
+
+  @include onMediumDesktop {
+    bottom: 400px;
+  }
+
+  &.active + .moon {
+    transform: translate(-63px, 30px);
+    transition: transform 0.7s var(--transition-tf);
+  }
+}
+
+.card4 {
+  order: 4;
+
+  & + .moon {
+    bottom: 55px;
+    left: 272px;
+    transform: translate(0, 0);
+    transition: transform var(--transition-d) var(--transition-tf);
+
+    @include onMediumDesktop {
+      left: 295px;
+      bottom: 86px;
+    }
+  }
+
+  @include onLaptop {
+    position: absolute;
+    bottom: 10px;
+    left: 270px;
+  }
+
+  @include onMediumDesktop {
+    left: 295px;
+    bottom: 50px;
+  }
+
+  &.active + .moon {
+    transform: translate(-30px, -73px);
+    transition: transform 0.7s var(--transition-tf);
+  }
+}
+
+.card5 {
+  order: 5;
+
+  & + .moon {
+    left: 60px;
+    bottom: 186px;
+    transform: translate(0, 0);
+    transition: transform var(--transition-d) var(--transition-tf);
+
+    @include onMediumDesktop {
+      bottom: 240px;
+    }
+  }
+
+  @include onLaptop {
+    position: absolute;
+    left: -10px;
+    bottom: 185px;
+  }
+
+  @include onMediumDesktop {
+    bottom: 240px;
+  }
+
+  &.active + .moon {
+    transform: translate(50px, 30px);
+    transition: transform 0.7s var(--transition-tf);
+  }
+}
+
+.card6 {
+  order: 6;
+
+  & + .moon {
+    left: 129px;
+    top: 228px;
+    transform: translate(0, 0);
+    transition: transform var(--transition-d) var(--transition-tf);
+  }
+
+  @include onLaptop {
+    position: absolute;
+    left: -10px;
+    top: 160px;
+  }
+
+  @include onMediumDesktop {
+    left: 20px;
+    top: 185px;
+  }
+
+  &.active + .moon {
+    transform: translate(130px, 41px);
+    transition: transform 0.7s var(--transition-tf);
+
+    @include onMediumDesktop {
+      transform: translate(152px, 62px);
+    }
+  }
+}
+
+.card7 {
+  order: 7;
+
+  & + .moon {
+    right: 112px;
+    bottom: 97px;
+    transform: translate(0, 0);
+    transition: transform var(--transition-d) var(--transition-tf);
+
+    @include onMediumDesktop {
+      right: 80px;
+      bottom: 132px;
+    }
+  }
+
+  @include onLaptop {
+    position: absolute;
+    right: 110px;
+    bottom: 25px;
+  }
+
+  @include onMediumDesktop {
+    right: 80px;
+    bottom: 65px;
+  }
+
+  &.active + .moon {
+    transition: transform 0.7s var(--transition-tf);
+    transform: translate(30px, -50px);
+  }
+}
+
+.card.active.card2 {
+  order: 0;
+}
+
+.card.active.card4 {
+  order: 6;
+}
+
+.card.active.card6 {
+  order: 8;
+}

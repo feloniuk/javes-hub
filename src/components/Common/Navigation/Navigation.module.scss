@@ -1,0 +1,350 @@
+@import '@/styles/utils/mixins';
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(to bottom, rgba(0, 2, 35, 0.9) 10%, rgba(0, 2, 35, 0.00) 90%);
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.navWrapper {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3rem;
+  position: relative;
+  z-index: 2;
+
+  gap: 3rem;
+}
+
+.logoLink {
+  display: block;
+  width: auto;
+  height: 35px;
+  min-width: 135px;
+}
+
+.logo {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.navMenu {
+  display: none;
+  @include onLaptop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: var(--br-m);
+    background-color: #0D0F2E;
+    padding: 0.25rem;
+    height: 3rem;
+
+    max-width: 640px;
+    width: 100%;
+    flex-shrink: 1;
+  }
+}
+
+.dropdown {
+  position: relative;
+  color: var(--white);
+  @include font(var(--fs-body-s), 1.5, var(--fw-medium));
+
+  &:last-of-type .dropdownMenu {
+    min-width: 128px;
+    width: 100%;
+  }
+
+  &.active {
+    .dropdownItem {
+      background-color: var(--white-10);
+      color: #FF6E75;
+    }
+
+    .dropdownMenu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+
+    }
+  }
+}
+
+.dropdownItem {
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-d), color var(--transition-d);
+
+  // @include onLaptop {
+  //   &:hover {
+  //     background-color: var(--white-10);
+  //     color: #FF6E75;
+  //   }
+  // }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 10;
+
+  border-radius: var(--br-m);
+  background-color: #0D0F2E;
+  border: 1px solid var(--white-10);
+  min-width: 193px;
+  width: max-content;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity var(--transition-d) var(--transition-tf), transform var(--transition-d) var(--transition-tf);
+
+  padding-top: 10px;
+}
+
+.separator {
+  position: absolute;
+  top: -12px;
+  height: 0.75rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+
+
+
+
+.navButton {
+  // display: none;
+
+  // @include onLaptop {
+    width: 140px;
+    height: 48px;
+    border-radius: var(--br-xs);
+    border: 2px solid var(--white-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    @include font(var(--fs-body-s), 1.5, var(--fw-medium));
+    transition: border-color var(--transition-d) var(--transition-tf);
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+
+    // pointer-events: none;
+    // opacity: 0;
+
+    &:hover {
+      border-color: var(--light-crimson);
+    }
+  // }
+}
+
+.hamburger {
+  width: 26px;
+  height: 23px;
+  position: relative;
+  cursor: pointer;
+
+  @include onLaptop {
+    display: none;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 26px;
+  background-color: var(--white);
+  border-radius: 2px;
+}
+
+.bar1 {
+  top: 0%;
+}
+.bar2 {
+  top: 45%;
+}
+.bar3 {
+  top: 90%;
+}
+
+
+
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  background-color: var(--main-bg);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mobileNavButton {
+  max-width: 343px;
+  width: 100%;
+  height: 48px;
+  border-radius: var(--br-xs);
+  border: 2px solid var(--white-50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  @include font(var(--fs-body-s), 1.5, var(--fw-medium));
+  position: absolute;
+  bottom: 2rem;
+  background-color: var(--main-bg);
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileNavMenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0.75rem;
+
+  padding: 0.5rem;
+  margin-inline: 1rem;
+
+  max-width: 672px;
+  min-height: 361px;
+  width: 100%;
+  height: auto;
+
+  background-color: #0D0F2E;
+  border-radius: 35px;
+  border: 1.5px solid var(--white-10);
+  z-index: 1;
+
+  @include onTablet {
+    gap: 1.5rem;
+  }
+}
+
+.mobileDropdown {
+  color: var(--white);
+  @include font(1.125rem, 1.5, var(--fw-medium));
+
+  &.active {
+    .mobileDropdownItem {
+      background-color: var(--white-10);
+      color: #FF6E75;
+    }
+
+    .arrowIcon {
+      transform: rotate(180deg);
+    }
+
+    .mobileDropdownMenuWrapper {
+      grid-template-rows: 1fr;
+    }
+
+    .mobileDropdownMenu {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.mobileDropdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  border-radius: 28px;
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color var(--transition-d), color var(--transition-d);
+}
+
+.arrowIconWrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowIcon {
+  width: 14px;
+  height: 8px;
+  transform: rotate(0);
+  transition: transform var(--transition-d);
+}
+
+.mobileDropdownMenuWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-d);
+}
+
+.mobileDropdownMenu {
+  overflow: hidden;
+  border-radius: 28px;
+  background-color: var(--white-10);
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: padding-top 0.2s, padding-bottom 0.2s, margin-top 0.2s;
+}
+
+.backgroundTop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  width: 100%;
+  height: 260px;
+  min-width: 1024px;
+}
+
+.backgroundBottom {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 234px;
+  min-width: 1024px;
+}
+

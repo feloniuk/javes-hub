@@ -1,0 +1,16 @@
+@import '@/styles/utils/mixins';
+
+.group {
+  opacity: 1;
+  transition: opacity var(--transition-d) ease;
+}
+
+.disabled {
+  opacity: 0.2;
+  transition: opacity var(--transition-d) ease;
+}
+
+.active {
+  opacity: 1;
+  transition: opacity var(--transition-d) ease;
+}
