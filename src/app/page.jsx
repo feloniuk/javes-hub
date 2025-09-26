@@ -17,7 +17,7 @@ import Glow from '@/components/Common/Glow/Glow';
 import SectionButton from '@/components/Common/SectionButton/SectionButton';
 import PlayerCard from '@/components/Main/PlayersDatabase/PlayerCard/PlayerCard';
 import GameCard from '@/components/Main/Games/GameCard/GameCard';
-import news from '@/components/Main/News/data.json';
+// import news from '@/components/Main/News/data.json';
 import players from '@/components/Main/PlayersDatabase/data.json';
 import games from '@/components/Main/Games/data.json';
 // import SEOJsonLd from '@/components/Common/SEOJsonLd/SEOJsonLd';
