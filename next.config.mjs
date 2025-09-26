@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: '*',
+  allowedDevOrigins: 'http://146.190.27.157/',
   transpilePackages: ['gsap'],
   images: {
     remotePatterns: [
