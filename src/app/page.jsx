@@ -10,10 +10,10 @@ import VisionHeading from '@/components/Main/VisionHeading/VisionHeading';
 import JAuth from '@/components/Main/JAuth/JAuth';
 import PainSolve from '@/components/Main/PainSolve/PainSolve';
 import WalletSection from '@/components/Main/Wallet/WalletSection/WalletSection';
-import NewsSection from '@/components/Main/News/NewsSection/NewsSection';
+// import NewsSection from '@/components/Main/News/NewsSection/NewsSection';
 import Glow from '@/components/Common/Glow/Glow';
-import BlockchainSection from '@/components/Main/Blockchain/BlockchainSection/BlockchainSection';
-import NewsCard from '@/components/Main/News/NewsCard/NewsCard';
+// import BlockchainSection from '@/components/Main/Blockchain/BlockchainSection/BlockchainSection';
+// import NewsCard from '@/components/Main/News/NewsCard/NewsCard';
 import SectionButton from '@/components/Common/SectionButton/SectionButton';
 import PlayerCard from '@/components/Main/PlayersDatabase/PlayerCard/PlayerCard';
 import GameCard from '@/components/Main/Games/GameCard/GameCard';
@@ -135,12 +135,12 @@ export default function Home() {
           glowLink='/assets/glow/left-glow.svg' 
         />
 
-        <BlockchainSection />
+        {/* <BlockchainSection />
         <NewsSection>
           {[...news].reverse().map((item) => (
             <NewsCard key={item.id} item={item} />
           ))}
-        </NewsSection>
+        </NewsSection> */}
       </main>
       {/* <SEOJsonLd
         description='Welcome to Javes - trading solution for millions of players worldwide,

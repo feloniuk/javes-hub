@@ -36,26 +36,7 @@ const PainSolve = () => {
             />
           </div>
           <p id='text' className={`${s.text} notranslate`}>
-            Gamers worldwide complete up to 1 million transactions daily in various online
-            games, exchanging items {' '}
-            <svg
-              className={s.icon}
-              role='img'
-              aria-label='Skull icon'
-              id='first'
-            >
-              <use xlinkHref='/assets/sprite.svg#icon-skull'></use>
-            </svg>
-            {' '}currencies, and services within a disorganized, scam-ridden
-            but a huge $12 billion market.  We are here to make things right!{' '}
-            <svg
-              className={s.icon}
-              role='img'
-              aria-label='Swords icon'
-              id='second'
-            >
-              <use xlinkHref='/assets/sprite.svg#icon-swords'></use>
-            </svg>
+          Streamline your work as a gamer. Take orders, deliver services ⚔️ and grow your profile - all from a single platform. Whether you’re selling in-game items,  coaching players, or offering services 💀, Javes centralizes everything into one clean hub.
           </p>
         </div>
       </div>
