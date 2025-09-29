@@ -1,9 +1,7 @@
-// src/lib/getAllPlayers.jsx
 export default async function getAllPlayers(page = 1, orderBy = "lastDealDate") {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const url = new URL('/api/players', baseUrl);
-
-  url.searchParams.append('page', page);
+  const url = new URL('/api/players', window.location.origin);
+  
+  url.searchParams.append('page', page.toString());
   url.searchParams.append('orderBy', orderBy);
 
   const response = await fetch(url.toString(), {
@@ -12,7 +10,7 @@ export default async function getAllPlayers(page = 1, orderBy = "lastDealDate") 
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     },
-    cache: 'no-store' // временно отключи кеш для теста
+    cache: 'no-store'
   });
 
   if (!response.ok) {
@@ -20,6 +18,5 @@ export default async function getAllPlayers(page = 1, orderBy = "lastDealDate") 
     throw new Error(errorData.error || `Failed to fetch data: ${response.status}`);
   }
 
-  const playersData = await response.json();
-  return playersData;
+  return await response.json();
 }
