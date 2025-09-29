@@ -7,7 +7,7 @@ export async function GET(request) {
     const orderBy = searchParams.get('orderBy') || 'lastDealDate';
     
     // API ключ берется ТОЛЬКО из серверных переменных
-    const apiKey = process.env.JAVES_API_KEY || process.env.NEXT_PUBLIC_JAVES_API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_JAVES_API_KEY;
     
     if (!apiKey) {
       console.error('API Key is missing!');
