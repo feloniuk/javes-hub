@@ -10,56 +10,26 @@ import VisionHeading from '@/components/Main/VisionHeading/VisionHeading';
 import JAuth from '@/components/Main/JAuth/JAuth';
 import PainSolve from '@/components/Main/PainSolve/PainSolve';
 import WalletSection from '@/components/Main/Wallet/WalletSection/WalletSection';
-// import NewsSection from '@/components/Main/News/NewsSection/NewsSection';
 import Glow from '@/components/Common/Glow/Glow';
-// import BlockchainSection from '@/components/Main/Blockchain/BlockchainSection/BlockchainSection';
-// import NewsCard from '@/components/Main/News/NewsCard/NewsCard';
 import SectionButton from '@/components/Common/SectionButton/SectionButton';
-import PlayerCard from '@/components/Main/PlayersDatabase/PlayerCard/PlayerCard';
 import GameCard from '@/components/Main/Games/GameCard/GameCard';
-// import news from '@/components/Main/News/data.json';
-import players from '@/components/Main/PlayersDatabase/data.json';
+import TopPlayersLoader from '@/components/Main/PlayersDatabase/TopPlayersLoader/TopPlayersLoader';
+import PlayerCardSkeleton from '@/components/Main/PlayersDatabase/PlayerCardSkeleton/PlayerCardSkeleton';
 import games from '@/components/Main/Games/data.json';
-// import SEOJsonLd from '@/components/Common/SEOJsonLd/SEOJsonLd';
 
-// export const metadata = {
-//   title: 'Trading Ecosystem for Gamers | Javes',
-//   description: 'Welcome to Javes - trading solution for millions of players worldwide, who want to buy and sell items, currencies and services in online computer games.',
-//   referrer: 'origin-when-cross-origin',
-//   publisher: 'Javes',
-//   keywords: ['online games', 'trading solution'],
-//   formatDetection: {
-//     email: false,
-//     address: false,
-//     telephone: false,
-//   },
-//   alternates: {
-//     canonical: '/',
-//   },
-//   openGraph: {
-//     title: 'Javes - Trading Ecosystem for Gamers',
-//     description: 'Welcome to Javes - trading solution for millions of players worldwide, who want to buy and sell items, currencies and services in online computer games.',
-//     images: [
-//       {
-//         url: 'https://javes.co/og.jpeg',
-//         width: 900,
-//         height: 900,
-//         type: 'image/jpeg',
-//         alt: "Javes",
-//       },
-//     ],
-//     url: 'https://javes.co/',
-//     type: 'website',
-//     siteName: 'Javes',
-//     locale: 'en_US',
-//   },
-//   twitter: {
-//     card: 'summary_large_image',
-//     title: 'Javes - Trading Ecosystem for Gamers',
-//     description: 'Welcome to Javes - trading solution for millions of players worldwide, who want to buy and sell items, currencies and services in online computer games.',
-//     images: ['https://javes.co/og.jpeg'],
-//   },
-// };
+// Компонент-скелетон для всех 4 карточек + кнопка
+function TopPlayersLoading() {
+  return (
+    <>
+      {[1, 2, 3, 4].map((i) => (
+        <PlayerCardSkeleton key={i} />
+      ))}
+      <SectionButton href='/pro-players'>
+        <span>Explore all <br /> <span className='bold'>Pro-Players</span></span>
+      </SectionButton>
+    </>
+  );
+}
 
 export default function Home() {
   return (
@@ -86,19 +56,11 @@ export default function Home() {
         />
 
         <Profile />
+        
         <DatabaseSection>
-          {players.map((player) => (
-            <PlayerCard
-              key={player.id}
-              avatar={player.avatar}
-              name={player.name}
-              deals={player.deals}
-            />
-          ))}
-
-          <SectionButton href='/pro-players'>
-            <span>Explore all <br /> <span className='bold'>Pro-Players</span></span>
-          </SectionButton>
+          <Suspense fallback={<TopPlayersLoading />}>
+            <TopPlayersLoader />
+          </Suspense>
         </DatabaseSection>
 
         <GamesSection>
