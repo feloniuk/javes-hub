@@ -11,7 +11,7 @@ export default async function getAllPlayers(page = 1, orderBy = "lastDealDate") 
       'Accept': 'application/json',
     },
     // Добавь кеш для оптимизации
-    next: { revalidate: 60 } // кеш на 60 секунд
+    next: { revalidate: 600 } // кеш на 600 секунд
   });
 
   if (!response.ok) {
