@@ -3,4 +3,4 @@
   { "id": "002", "href": "/games", "text": "Games", "svgId": "games" },
   { "id": "003", "href": "/pro-players", "text": "Pro Players", "svgId": "pro-players" },
   { "id": "004", "href": "/contact-us", "text": "Contact", "svgId": "contact" }
-]
+    ]

@@ -1,0 +1,37 @@
+{
+  "page_title": "Contact Us",
+  "title": "<gradient>Get</gradient> in Touch",
+  "description": "If you have a proposal for cooperation/collaboration, have questions about our project, or are interested in investing, feel free to contact us.",
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter your name",
+      "required": "Please enter your name"
+    },
+    "organization": {
+      "label": "Organization",
+      "placeholder": "Enter your organization"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email",
+      "required": "Please enter your email"
+    },
+    "subject": {
+      "label": "Subject",
+      "placeholder": "Enter your subject",
+      "required": "Please enter the subject of your message"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Enter your message",
+      "required": "Please enter your message"
+    },
+    "submit": "Contact Us",
+    "sending": "Sending..."
+  },
+  "success-message": "Your message has been sent successfully. We will get back to you as soon as possible.",
+  "contact-card": {
+    "title": "Contact Information"
+  }
+}

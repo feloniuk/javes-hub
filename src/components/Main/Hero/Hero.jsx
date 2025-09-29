@@ -11,7 +11,7 @@ import { useHeroSectionAnimation } from '@/hooks/home/HeroSection/useHeroSection
 const Hero = () => {
   const [showBottomLoopAnimation, setShowBottomLoopAnimation] = useState(false);
   const [showTopLoopAnimation, setShowTopLoopAnimation] = useState(false);
-  
+
   const bottomRef = useRef();
   const topRef = useRef();
   const containerRef = useRef();
@@ -19,20 +19,20 @@ const Hero = () => {
   const descrRef = useRef();
   const joinBtnRef = useRef();
   const investBtnRef = useRef();
-  
+
   const { width } = useWindowSize();
   const deviceType = useDeviceType(width);
   const animations = useLoadAnimation(deviceType);
   useHeroSectionAnimation(headingRef, descrRef, joinBtnRef, investBtnRef);
-  
+
   const handleBottomAnimationComplete = () => {
     setShowBottomLoopAnimation(true);
   };
-  
+
   const handleTopAnimationComplete = () => {
     setShowTopLoopAnimation(true);
   };
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -59,32 +59,32 @@ const Hero = () => {
     <section className={s.sectionWrapper} ref={containerRef}>
       <div className={s.topAnimationWrapper}>
         {showTopLoopAnimation ? (
-          <Lottie 
-            animationData={animations.topLoopAnim} 
-            lottieRef={topRef} 
-            loop={true} 
+          <Lottie
+            animationData={animations.topLoopAnim}
+            lottieRef={topRef}
+            loop={true}
           />
           ) : (
-          <Lottie 
-            animationData={animations.topStartAnim} 
-            lottieRef={topRef} 
-            autoplay={true} 
-            loop={false} 
-            onComplete={handleTopAnimationComplete} 
+          <Lottie
+            animationData={animations.topStartAnim}
+            lottieRef={topRef}
+            autoplay={true}
+            loop={false}
+            onComplete={handleTopAnimationComplete}
           />
         )}
       </div>
 
       <div className={s.contentWrapper}>
         <h1 ref={headingRef} className={`${s.heading} heading-1`}>
-          <span className={s.orangeGradientText}>Trading</span> 
+          <span className={s.orangeGradientText}>Trading</span>
           {` Ecosystem for`}
           <span className={s.purpleGradientText}>&nbsp;Gamers</span>
         </h1>
 
         <p ref={descrRef} className={s.description}>
-          Javes is the trading solution for millions of players worldwide, 
-          who want to buy and sell items, currencies and services in online 
+          Javes is the trading solution for millions of players worldwide,
+          who want to buy and sell items, currencies and services in online
           computer games.
         </p>
 
@@ -95,15 +95,15 @@ const Hero = () => {
           </div>
 
           {/* <Link
-            href='/' 
-            className={s.linkHero} 
+            href='/'
+            className={s.linkHero}
             role='button'
             ref={investBtnRef}
           >
             <span className={s.linkText}>Invest in Javes</span>
-            <Image 
-              className={s.linkArrow} 
-              src='/assets/home/hero/hero-arrow.svg' 
+            <Image
+              className={s.linkArrow}
+              src='/assets/home/hero/hero-arrow.svg'
               alt="Explore Sellers Solutions"
               width={14}
               height={14}
@@ -114,18 +114,18 @@ const Hero = () => {
 
       <div className={s.bottomAnimationWrapper}>
         {showBottomLoopAnimation ? (
-          <Lottie 
-            animationData={animations.bottomLoopAnim} 
-            lottieRef={bottomRef} 
-            loop={true} 
+          <Lottie
+            animationData={animations.bottomLoopAnim}
+            lottieRef={bottomRef}
+            loop={true}
           />
           ) : (
-          <Lottie 
-            animationData={animations.bottomStartAnim} 
-            lottieRef={bottomRef} 
-            autoplay={true} 
-            loop={false} 
-            onComplete={handleBottomAnimationComplete} 
+          <Lottie
+            animationData={animations.bottomStartAnim}
+            lottieRef={bottomRef}
+            autoplay={true}
+            loop={false}
+            onComplete={handleBottomAnimationComplete}
           />
         )}
       </div>

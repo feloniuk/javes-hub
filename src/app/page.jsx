@@ -80,9 +80,9 @@ export default function Home() {
           <SolutionsSection />
         </Suspense>
 
-        <Glow  
-          className='ltGlowWrapper' 
-          glowLink='/assets/glow/left-glow.svg' 
+        <Glow
+          className='ltGlowWrapper'
+          glowLink='/assets/glow/left-glow.svg'
         />
 
         <Profile />
@@ -100,7 +100,7 @@ export default function Home() {
             <span>Explore all <br /> <span className='bold'>Pro-Players</span></span>
           </SectionButton>
         </DatabaseSection>
-        
+
         <GamesSection>
           {games.map((game) => (
             <GameCard
@@ -128,11 +128,11 @@ export default function Home() {
             Sign-up
           </SectionButton>
         </JAuth>
-        
+
         <WalletSection />
-        <Glow 
-          className='lbGlowWrapper' 
-          glowLink='/assets/glow/left-glow.svg' 
+        <Glow
+          className='lbGlowWrapper'
+          glowLink='/assets/glow/left-glow.svg'
         />
 
         {/* <BlockchainSection />

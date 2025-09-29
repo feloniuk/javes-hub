@@ -100,7 +100,7 @@ const Navigation = () => {
                   href={item.href}
                   className={s.mobileNavLink}
                   onClick={closeMenu}
-                  data-link={item.id}
+                  data-link={item.id} 
                 >
                   {item.text}
                 </Link>

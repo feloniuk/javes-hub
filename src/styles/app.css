@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .gradient-text {
+        background: linear-gradient(93deg, #FF9E41 34.18%, #FFF 73.09%);
+        background-clip: text;
+    }
+    .purple-gradient {
+        @apply bg-gradient-to-b from-accents-purple to-accents-purple-dark;
+    }
+    .red-gradient {
+        @apply bg-gradient-to-b from-accents-red to-accents-red-dark;
+    }
+    .orange-gradient {
+        @apply bg-gradient-to-b from-accents-orange-dark to-accents-orange;
+    }
+    .gradient-border-red {
+        border-image: linear-gradient(180deg, #F56C8F 50%, #EF7271);
+        border-image-repeat: repeat;
+    }
+}

@@ -20,13 +20,13 @@ const Profile = () => {
       <div className={`${s.container} container`}>
         <div className={s.content}>
           <h2 ref={headingRef} className={`${s.heading} heading-2`}>
-            Join as a <span className='bold'>PRO-Player</span> and&nbsp;Customize 
+            Join as a <span className='bold'>PRO-Player</span> and&nbsp;Customize
             your <span className='bold'>PROfile</span>
           </h2>
 
           <p ref={contentRef} className={s.text}>
-            If you&apos;re great at online games and want to make money by completing 
-            game deals, join as a PRO-Player now and customize your PROfile to 
+            If you&apos;re great at online games and want to make money by completing
+            game deals, join as a PRO-Player now and customize your PROfile to
             present yourself in the Javes ecosystem.
           </p>
         </div>
@@ -40,7 +40,7 @@ const Profile = () => {
             <Image
               className={s.image}
               src="/assets/home/profile/profile-mobile.svg"
-              alt="A mobile interface for Public Profile Settings showing theme color options, 
+              alt="A mobile interface for Public Profile Settings showing theme color options,
                 a sample user profile with status, statistics, and switches for display preferences."
               width={290}
               height={1000}
@@ -57,7 +57,7 @@ const Profile = () => {
           >
             Join as a PRO-Player now
           </Button>
-          <span className={s.tempText}>Sign-ups start on June 26</span>
+          <span className={s.tempText}>Sign-ups start on soon</span>
         </div>
       </div>
     </section>
