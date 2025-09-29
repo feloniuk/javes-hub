@@ -1,3 +1,4 @@
+// src/app/page.jsx
 import { Suspense } from 'react';
 import HomePage from '@/components/Pages/HomePage/HomePage';
 import Hero from '@/components/Main/Hero/Hero';
@@ -17,7 +18,9 @@ import TopPlayersLoader from '@/components/Main/PlayersDatabase/TopPlayersLoader
 import PlayerCardSkeleton from '@/components/Main/PlayersDatabase/PlayerCardSkeleton/PlayerCardSkeleton';
 import games from '@/components/Main/Games/data.json';
 
-// Компонент-скелетон для всех 4 карточек + кнопка
+export const dynamic = 'force-dynamic';
+export const revalidate = 3600;
+
 function TopPlayersLoading() {
   return (
     <>
@@ -86,7 +89,6 @@ export default function Home() {
 
         <JAuth>
           <SectionButton href='/'>
-            {/* Sign-up <span className='bold'>Now</span> */}
             Sign-up
           </SectionButton>
         </JAuth>
@@ -96,19 +98,7 @@ export default function Home() {
           className='lbGlowWrapper'
           glowLink='/assets/glow/left-glow.svg'
         />
-
-        {/* <BlockchainSection />
-        <NewsSection>
-          {[...news].reverse().map((item) => (
-            <NewsCard key={item.id} item={item} />
-          ))}
-        </NewsSection> */}
       </main>
-      {/* <SEOJsonLd
-        description='Welcome to Javes - trading solution for millions of players worldwide,
-        who want to buy and sell items, currencies and services in online computer games.'
-        id='https://javes.co/'
-      /> */}
     </HomePage>
   );
 }

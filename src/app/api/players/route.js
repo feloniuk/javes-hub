@@ -1,14 +1,16 @@
-// src/app/api/players/route.js
 import { NextResponse } from 'next/server';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const page = searchParams.get('page') || '1';
     const orderBy = searchParams.get('orderBy') || 'lastDealDate';
-
+    
     const apiKey = process.env.JAVES_API_KEY;
-
+    
     if (!apiKey) {
       console.error('API Key is missing!');
       return NextResponse.json(
@@ -16,9 +18,11 @@ export async function GET(request) {
         { status: 500 }
       );
     }
-
+    
     const url = `https://adm.mmonster.co/api/javes/providers?orderDir=desc&pageSize=15&orderBy=${orderBy}&page=${page}`;
-
+    
+    console.log('Fetching from:', url);
+    
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -26,28 +30,25 @@ export async function GET(request) {
         'Accept': 'application/json',
         'Authorization': `Bearer ${apiKey}`
       },
-      next: { revalidate: 3600 } // Кеш на 1 час
+      cache: 'no-store' // Для динамических данных
     });
+
+    console.log('External API Response status:', response.status);
 
     if (!response.ok) {
       const errorText = await response.text();
       console.error('External API Error:', errorText);
       return NextResponse.json(
-        { error: 'Failed to fetch players', details: errorText },
+        { error: 'Failed to fetch players', status: response.status, details: errorText },
         { status: response.status }
       );
     }
 
     const data = await response.json();
-
-    return NextResponse.json(data, {
-      headers: {
-        'Access-Control-Allow-Origin': 'https://javes.dev',
-        'Access-Control-Allow-Methods': 'GET',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      }
-    });
-
+    console.log('Data fetched successfully, items:', data.items?.length || 0);
+    
+    return NextResponse.json(data);
+    
   } catch (error) {
     console.error('API Route Error:', error);
     return NextResponse.json(

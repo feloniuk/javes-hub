@@ -3,55 +3,40 @@ import SectionButton from '@/components/Common/SectionButton/SectionButton';
 import { getTopPlayers } from '@/actions/playersAction';
 
 export default async function TopPlayersLoader() {
+  let playersData;
+  
   try {
-    const playersData = await getTopPlayers();
-    
-    return (
-      <>
-        {playersData.data.map((player) => (
-          <PlayerCard
-            key={player.id}
-            avatar={player.avatar?.thumbnail?.url 
-              ? `https://adm.mmonster.co${player.avatar.thumbnail.url}` 
-              : '/assets/home/players/avatar-helmet.svg'}
-            name={player.name}
-            deals={player.completedDealsCount}
-          />
-        ))}
-
-        <SectionButton href='/pro-players' disabled={false}>
-          <span>Explore all <br /> <span className='bold'>Pro-Players</span></span>
-        </SectionButton>
-      </>
-    );
+    console.log('Loading top players...');
+    playersData = await getTopPlayers();
+    console.log('Players loaded:', playersData.data?.length || 0);
   } catch (error) {
     console.error('Error loading top players:', error);
     
-    // Fallback на статические данные при ошибке
+    // Fallback на статические данные
     const fallbackPlayers = [
       {
         id: 1,
         avatar: "/assets/home/players/reborn-team-avatar.webp",
         name: "Reborn Team",
-        deals: 2068
+        completedDealsCount: 2068
       },
       {
         id: 2,
         avatar: "/assets/home/players/sefuz-club-avatar.webp",
         name: "Sefuz Club",
-        deals: 689
+        completedDealsCount: 689
       },
       {
         id: 3,
         avatar: "/assets/home/players/pollka-avatar.webp",
         name: "Pollka",
-        deals: 522
+        completedDealsCount: 522
       },
       {
         id: 4,
         avatar: "/assets/home/players/the-necro-avatar.webp",
         name: "TheNecro",
-        deals: 155
+        completedDealsCount: 155
       }
     ];
     
@@ -62,7 +47,7 @@ export default async function TopPlayersLoader() {
             key={player.id}
             avatar={player.avatar}
             name={player.name}
-            deals={player.deals}
+            deals={player.completedDealsCount}
           />
         ))}
         <SectionButton href='/pro-players' disabled={false}>
@@ -71,4 +56,27 @@ export default async function TopPlayersLoader() {
       </>
     );
   }
+  
+  if (!playersData?.data || playersData.data.length === 0) {
+    return <div>No players found</div>;
+  }
+  
+  return (
+    <>
+      {playersData.data.map((player) => (
+        <PlayerCard
+          key={player.id}
+          avatar={player.avatar?.thumbnail?.url 
+            ? `https://adm.mmonster.co${player.avatar.thumbnail.url}` 
+            : '/assets/home/players/avatar-helmet.svg'}
+          name={player.name}
+          deals={player.completedDealsCount}
+        />
+      ))}
+
+      <SectionButton href='/pro-players' disabled={false}>
+        <span>Explore all <br /> <span className='bold'>Pro-Players</span></span>
+      </SectionButton>
+    </>
+  );
 }

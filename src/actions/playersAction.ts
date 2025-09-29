@@ -1,7 +1,5 @@
 'use server';
 
-import { unstable_cache } from 'next/cache';
-
 interface Player {
   id: number;
   name: string;
@@ -30,9 +28,10 @@ interface PlayersResponse {
 
 async function fetchTopPlayers(): Promise<PlayersResponse> {
   const apiKey = process.env.JAVES_API_KEY;
-
+  
   if (!apiKey) {
-    throw new Error('JAVES_API_KEY is not defined');
+    console.error('JAVES_API_KEY is missing');
+    throw new Error('API configuration error');
   }
 
   const url = new URL('https://adm.mmonster.co/api/javes/providers');
@@ -41,31 +40,37 @@ async function fetchTopPlayers(): Promise<PlayersResponse> {
   url.searchParams.append('pageSize', '4');
   url.searchParams.append('page', '1');
 
-  const response = await fetch(url.toString(), {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Authorization': `Bearer ${apiKey}`
-    },
-    next: {
-      revalidate: 86400 // 24 часа
+  console.log('Fetching top players from:', url.toString());
+
+  try {
+    const response = await fetch(url.toString(), {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      next: {
+        revalidate: 3600 // 1 час вместо 24
+      }
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Failed to fetch top players:', response.status, errorText);
+      throw new Error(`Failed to fetch top players: ${response.status}`);
     }
-  });
 
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({}));
-    throw new Error(errorData.message || 'Failed to fetch top players');
+    const data = await response.json();
+    console.log('Top players fetched successfully:', data.data?.length || 0);
+    
+    return data;
+  } catch (error) {
+    console.error('Error in fetchTopPlayers:', error);
+    throw error;
   }
-
-  return await response.json();
 }
 
-export const getTopPlayers = unstable_cache(
-  async () => fetchTopPlayers(),
-  ['top-players'],
-  {
-    revalidate: 86400,
-    tags: ['top-players']
-  }
-);
+export async function getTopPlayers(): Promise<PlayersResponse> {
+  return fetchTopPlayers();
+}
