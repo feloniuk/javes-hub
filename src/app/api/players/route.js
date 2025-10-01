@@ -8,9 +8,9 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const page = searchParams.get('page') || '1';
     const orderBy = searchParams.get('orderBy') || 'lastDealDate';
-    
+
     const apiKey = process.env.JAVES_API_KEY;
-    
+
     if (!apiKey) {
       console.error('API Key is missing!');
       return NextResponse.json(
@@ -18,11 +18,11 @@ export async function GET(request) {
         { status: 500 }
       );
     }
-    
+
     const url = `https://adm.mmonster.co/api/javes/providers?orderDir=desc&pageSize=15&orderBy=${orderBy}&page=${page}`;
-    
+
     console.log('Fetching from:', url);
-    
+
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -33,7 +33,6 @@ export async function GET(request) {
       cache: 'no-store' // Для динамических данных
     });
 
-    console.log('External API Response status:', response.status);
 
     if (!response.ok) {
       const errorText = await response.text();
