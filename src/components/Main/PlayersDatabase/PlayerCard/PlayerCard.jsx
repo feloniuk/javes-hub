@@ -10,7 +10,7 @@ const PlayerCard = ({
     <div className={s.playerCard}>
       <div className={s.avatarWrapper}>
         <Image 
-          src="/assets/pro-players/ellipse.svg"
+          src={avatar} 
           alt='Players avatar'
           className={s.avatar}
           width={72}
@@ -22,7 +22,7 @@ const PlayerCard = ({
       <p className={s.deals}>{`${deals} Deals`}</p>
       <div className={s.ratingWrapper}>
           <Image 
-            src={avatar ? `https://adm.mmonster.co${avatar.thumbnail.url}` : "/assets/pro-players/avatar-helmet.svg"}
+            src='/assets/home/players/stars.svg' 
             alt="Rating stars" 
             className={s.rating}
             width={82}
