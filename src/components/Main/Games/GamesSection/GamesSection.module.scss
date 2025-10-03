@@ -55,26 +55,20 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(165px, 219px));
-  gap: 2rem 0.75rem;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
 
   @include onTablet {
-    grid-template-columns: repeat(3, minmax(165px, 219px));
-    gap: 3rem 0.75rem;
+    gap: 1rem;
   }
 
   @include onLaptop {
-    grid-template-columns: repeat(4, minmax(219px, 248px));
+    gap: 1rem;
   }
 
   @include onMediumDesktop {
-    grid-template-columns: repeat(auto-fit, minmax(219px, 248px));
-    gap: 3.5rem 0.75rem;
-  }
-
-  @include onLargeDesktop {
-    grid-template-columns: repeat(5, minmax(219px, 248px));
+    gap: 1rem;
   }
 }

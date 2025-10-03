@@ -5,26 +5,66 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0.75rem;
-  min-width: 165px;
-  min-height: 165px;
-  max-width: 219px;
-  width: 100%;
-  aspect-ratio: 1 / 1;
   background: var(--purple-gradient);
   border-radius: var(--br-s);
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1), 
+              box-shadow 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  // Той самий flex як у GameCard
+  flex: 0 0 calc(20% - 16px);
+  min-width: 200px;
+  height: 5em; // Така ж висота як у карточок
 
   @include onTablet {
-    padding: 1.25rem;
+    padding: 1rem;
+    
+    &:nth-of-type(n+5) {
+      display: none;
+    }
   }
 
   @include onLaptop {
-    max-width: 248px;
+    padding: 1.25rem;
+
+    &:nth-of-type(n+5) {
+      display: flex;
+    }
+
+    &:nth-of-type(n+7) {
+      display: none;
+    }
 
     &:hover {
+      transform: scale(1.03) translateY(-3px);
+      box-shadow: 0 5px 15px rgba(132, 65, 255, 0.3);
+
       .arrow {
         transform: rotate(-45deg);
       }
     }
+  }
+
+  @include onLargeDesktop {
+    &:nth-of-type(n+7) {
+      display: flex;
+    }
+  }
+
+  // Адаптивність як у GameCard
+  @media (max-width: 1600px) {
+    flex: 0 0 calc(25% - 12px);
+  }
+
+  @media (max-width: 992px) {
+    flex: 0 0 calc(50% - 8px);
+    min-width: 180px;
+  }
+
+  @media (max-width: 576px) {
+    flex: 0 0 100%;
+    min-width: auto;
+    height: 6em; // Трохи вища на мобільних
   }
 
   &.disabled {
@@ -42,10 +82,9 @@
 }
 
 .text {
-  @include font(var(--fs-body-xl), 1.5, var(--fw-regular));
-
-  //temp styles
+  @include font(var(--fs-body-l), 1.4, var(--fw-regular));
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.25rem;
+  color: var(--white);
 }

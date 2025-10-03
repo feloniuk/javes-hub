@@ -70,7 +70,7 @@ export default function Home() {
           {games.map((game) => (
             <GameCard
               key={game.id}
-              logo={game.logo}
+              icon={game.icon}
               image={game.image}
               name={game.name}
             />
