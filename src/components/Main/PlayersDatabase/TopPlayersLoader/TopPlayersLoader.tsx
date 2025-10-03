@@ -68,7 +68,7 @@ export default async function TopPlayersLoader() {
           key={player.id}
           avatar={player.avatar?.thumbnail?.url 
             ? `https://adm.mmonster.co${player.avatar.thumbnail.url}` 
-            : '/assets/home/pro-players/avatar-helmet.svg'}
+            : '/assets/pro-players/avatar-helmet.svg'}
           name={player.name}
           deals={player.completedDealsCount}
         />
