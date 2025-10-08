@@ -14,10 +14,9 @@ import WalletSection from '@/components/Main/Wallet/WalletSection/WalletSection'
 import Glow from '@/components/Common/Glow/Glow';
 import SectionButton from '@/components/Common/SectionButton/SectionButton';
 import GamesSectionButton from '@/components/Main/Games/GamesSectionButton/GamesSectionButton';
-import GameCard from '@/components/Main/Games/GameCard/GameCard';
+import GamesLoader from '@/components/Main/Games/GamesLoader/GamesLoader';
 import TopPlayersLoader from '@/components/Main/PlayersDatabase/TopPlayersLoader/TopPlayersLoader';
 import PlayerCardSkeleton from '@/components/Main/PlayersDatabase/PlayerCardSkeleton/PlayerCardSkeleton';
-import games from '@/components/Main/Games/data.json';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 3600;
@@ -31,6 +30,19 @@ function TopPlayersLoading() {
       <SectionButton href='/pro-players'>
         <span>Explore all <br /> <span className='bold'>Pro-Players</span></span>
       </SectionButton>
+    </>
+  );
+}
+
+function GamesLoading() {
+  return (
+    <>
+      {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+        <div 
+          key={i} 
+          className="bg-white-10 rounded-xl h-20 animate-pulse"
+        />
+      ))}
     </>
   );
 }
@@ -68,15 +80,10 @@ export default function Home() {
         </DatabaseSection>
 
         <GamesSection>
-          {games.map((game) => (
-            <GameCard
-              key={game.id}
-              icon={game.icon}
-              image={game.image}
-              name={game.name}
-            />
-          ))}
-
+          <Suspense fallback={<GamesLoading />}>
+            <GamesLoader />
+          </Suspense>
+          
           <GamesSectionButton href='/games'>
             More <span className='bold'>Games</span>
           </GamesSectionButton>

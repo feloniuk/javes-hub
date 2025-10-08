@@ -5,7 +5,7 @@ import s from './GamesSectionButton.module.scss';
 const GamesSectionButton = ({ 
   href,
   children,
-  disabled
+  disabled = false
 }) => {
   return (
     <Link 
