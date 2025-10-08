@@ -42,9 +42,8 @@
   }
 
   &:hover {
-    transform: scale(1.03) translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    background-color: #2a3147;
+    transform: scale(1.03) translateY(-3px);
+    box-shadow: 0 5px 15px rgba(132, 65, 255, 0.3);
   }
 
   // Адаптивність
@@ -64,13 +63,13 @@
 }
 
 .iconContainer {
-  width: 60px;
-  height: 60px;
+  width: 25%;
+  height: 100%;
   margin-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2b324a;
+  background-color: var(--white-10);;
   transition: background-color 0.3s ease;
 
   .gameCard:hover & {
@@ -79,8 +78,8 @@
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
+  // width: 32px;
+  // height: 32px;
   transition: transform 0.3s ease;
 
   .gameCard:hover & {

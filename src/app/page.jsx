@@ -13,6 +13,7 @@ import PainSolve from '@/components/Main/PainSolve/PainSolve';
 import WalletSection from '@/components/Main/Wallet/WalletSection/WalletSection';
 import Glow from '@/components/Common/Glow/Glow';
 import SectionButton from '@/components/Common/SectionButton/SectionButton';
+import GamesSectionButton from '@/components/Main/Games/GamesSectionButton/GamesSectionButton';
 import GameCard from '@/components/Main/Games/GameCard/GameCard';
 import TopPlayersLoader from '@/components/Main/PlayersDatabase/TopPlayersLoader/TopPlayersLoader';
 import PlayerCardSkeleton from '@/components/Main/PlayersDatabase/PlayerCardSkeleton/PlayerCardSkeleton';
@@ -76,9 +77,9 @@ export default function Home() {
             />
           ))}
 
-          <SectionButton href='/games'>
+          <GamesSectionButton href='/games'>
             More <span className='bold'>Games</span>
-          </SectionButton>
+          </GamesSectionButton>
         </GamesSection>
 
         <VisionHeading />
