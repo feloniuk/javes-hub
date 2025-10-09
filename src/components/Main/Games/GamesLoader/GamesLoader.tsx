@@ -32,9 +32,6 @@ export default async function GamesLoader() {
         />
       ))}
 
-      <GamesSectionButton href='/games'>
-        More <span className='bold'>Games</span>
-      </GamesSectionButton>
     </>
   );
 }
