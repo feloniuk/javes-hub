@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import { useRef } from 'react';
 import { useGamesSectionAnimation } from '@/hooks/home/GamesSection/useGamesSectionAnimation';
 import s from './GamesSection.module.scss';
@@ -25,7 +26,7 @@ const GamesSection = ({ children, gamesCount = 0 }: GamesSectionProps) => {
           </h2>
 
           <p ref={textRef} className={s.description}>
-            {gamesCount > 0 
+            {gamesCount > 0
               ? `${gamesCount} games where Pro-Players are currently executing deals through the JAVES trading ecosystem.`
               : 'Games where Pro-Players are currently executing deals through the JAVES trading ecosystem.'
             }

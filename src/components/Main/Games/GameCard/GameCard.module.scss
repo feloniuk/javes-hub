@@ -19,24 +19,25 @@
   flex: 0 0 calc(20% - 16px);
   min-width: 200px;
 
+  // Скрытие карточек на разных разрешениях
   @include onTablet {
-    &:nth-of-type(n+5) {
+    &:nth-child(n+5) {
       display: none;
     }
   }
 
   @include onLaptop {
-    &:nth-of-type(n+5) {
+    &:nth-child(n+5) {
       display: flex;
     }
 
-    &:nth-of-type(n+7) {
+    &:nth-child(n+7) {
       display: none;
     }
   }
 
   @include onLargeDesktop {
-    &:nth-of-type(n+7) {
+    &:nth-child(n+7) {
       display: flex;
     }
   }
@@ -46,7 +47,6 @@
     box-shadow: 0 5px 15px rgba(132, 65, 255, 0.3);
   }
 
-  // Адаптивність
   @media (max-width: 1600px) {
     flex: 0 0 calc(25% - 12px);
   }
@@ -69,7 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white-10);;
+  background-color: var(--white-10);
   transition: background-color 0.3s ease;
 
   .gameCard:hover & {
@@ -78,8 +78,6 @@
 }
 
 .icon {
-  // width: 32px;
-  // height: 32px;
   transition: transform 0.3s ease;
 
   .gameCard:hover & {

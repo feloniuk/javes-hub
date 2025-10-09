@@ -17,22 +17,10 @@
 
   @include onTablet {
     padding: 1rem;
-    
-    &:nth-of-type(n+5) {
-      display: none;
-    }
   }
 
   @include onLaptop {
     padding: 1.25rem;
-
-    &:nth-of-type(n+5) {
-      display: flex;
-    }
-
-    &:nth-of-type(n+7) {
-      display: none;
-    }
 
     &:hover {
       transform: scale(1.03) translateY(-3px);
@@ -41,12 +29,6 @@
       .arrow {
         transform: rotate(-45deg);
       }
-    }
-  }
-
-  @include onLargeDesktop {
-    &:nth-of-type(n+7) {
-      display: flex;
     }
   }
 

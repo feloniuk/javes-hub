@@ -44,7 +44,7 @@ const GameCard = ({ icon, name, isOnSale = false, url }: GameCardProps) => {
   if (url) {
     return (
       <a 
-        href={url} 
+        // href={url} 
         className={s.gameCard}
         target="_blank"
         rel="noopener noreferrer"
