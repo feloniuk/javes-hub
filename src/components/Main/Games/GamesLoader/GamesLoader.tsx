@@ -26,7 +26,7 @@ export default async function GamesLoader() {
       {displayedGames.map((game) => (
         <GameCard
           key={game.id}
-          icon={game.icon?.url || game.icon as unknown as string || null}
+          icon={typeof game.icon === 'string' ? game.icon : game.icon?.url || null}
           name={game.name}
           isOnSale={game.isOnSale}
         />
