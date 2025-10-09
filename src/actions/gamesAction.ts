@@ -61,7 +61,7 @@ export async function getGames(): Promise<Game[]> {
 
     // Находим категорию "Games" и возвращаем её children
     const gamesCategory = result.data.find(
-      (category) => category.name === 'Games'
+      (category) => category.name === 'Choose Game'
     );
 
     if (!gamesCategory || !gamesCategory.children) {

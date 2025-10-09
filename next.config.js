@@ -8,6 +8,12 @@ const nextConfig = {
           port: '',
           pathname: '/uploads/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'dev2-store.mmonster.co',
+          port: '',
+          pathname: '/media/**',
+        },
       ],
     },
   }
