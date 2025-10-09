@@ -1,5 +1,4 @@
 import GameCard from '@/components/Main/Games/GameCard/GameCard';
-import GamesSectionButton from '@/components/Main/Games/GamesSectionButton/GamesSectionButton';
 import { getGames } from '@/actions/gamesAction';
 
 export default async function GamesLoader() {
