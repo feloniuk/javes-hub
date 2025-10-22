@@ -11,6 +11,7 @@ const GameGridCard = ({
       <div className={s.imagesWrapper}>
         <Image 
           src={logo} 
+          src-image={image}
           alt={`${name} logo`}
           className={s.image}
           width={165}
