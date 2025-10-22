@@ -16,13 +16,13 @@ const GameGridCard = ({
           width={165}
           height={165}
         />
-        <Image 
+        {/* <Image 
           src={image}
           alt={`${name} image`} 
           className={s.image}
           width={165}
           height={165}
-        />
+        /> */}
       </div>
 
       <p className={s.label}>{name}</p>
