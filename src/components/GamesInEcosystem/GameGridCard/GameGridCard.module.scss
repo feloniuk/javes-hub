@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.75rem;
 
   opacity: 0.01;
@@ -23,19 +23,24 @@
   @include onLaptop {
     &:hover {
       .image {
-        transform: translateY(-100%);
+        // transform: translateY(-100%);
       }
     }
   }
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
   border-radius: var(--br-s);
   transform: translateY(0);
   transition: transform 0.2s var(--transition-tf);
+  /* Добавляем центрирование */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .label {
