@@ -60,15 +60,26 @@
   gap: 1rem;
   justify-content: flex-start;
 
-  @include onTablet {
-    gap: 1rem;
+  // Специальная логика для малого количества
+  &.small {
+    @media (min-width: 993px) {
+      max-width: 100%; // ~3 карточки
+      
+      > * {
+        flex: 1 1 auto;
+        min-width: 250px;
+        max-width: 350px;
+      }
+    }
   }
 
-  @include onLaptop {
-    gap: 1rem;
-  }
-
-  @include onMediumDesktop {
-    gap: 1rem;
+  &.medium {
+    @media (min-width: 993px) {
+      > * {
+        flex: 1 1 auto;
+        min-width: 250px;
+        max-width: 300px;
+      }
+    }
   }
 }

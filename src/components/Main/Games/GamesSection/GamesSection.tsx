@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { Children } from 'react';
 import { useRef } from 'react';
 import { useGamesSectionAnimation } from '@/hooks/home/GamesSection/useGamesSectionAnimation';
 import s from './GamesSection.module.scss';
@@ -17,6 +17,17 @@ const GamesSection = ({ children, gamesCount = 0 }: GamesSectionProps) => {
 
   useGamesSectionAnimation(sectionRef, headingRef, textRef, gridRef);
 
+  // Подсчитываем реальное количество дочерних элементов
+  const childrenCount = Children.count(children);
+  const displayCount = gamesCount || childrenCount;
+
+  // Определяем класс для grid
+  const getGridClass = () => {
+    if (displayCount <= 3) return `${s.grid} ${s.small}`;
+    if (displayCount <= 6) return `${s.grid} ${s.medium}`;
+    return s.grid;
+  };
+
   return (
     <section ref={sectionRef} className={s.section}>
       <div className='container'>
@@ -26,14 +37,17 @@ const GamesSection = ({ children, gamesCount = 0 }: GamesSectionProps) => {
           </h2>
 
           <p ref={textRef} className={s.description}>
-            {gamesCount > 0
-              ? `${gamesCount} games where Pro-Players are currently executing deals through the JAVES trading ecosystem.`
+            {displayCount > 0
+              ? `${displayCount} game${displayCount !== 1 ? 's' : ''} where Pro-Players are currently executing deals through the JAVES trading ecosystem.`
               : 'Games where Pro-Players are currently executing deals through the JAVES trading ecosystem.'
             }
           </p>
         </div>
 
-        <div ref={gridRef} className={s.grid}>
+        <div 
+          ref={gridRef} 
+          className={getGridClass()}
+        >
           {children}
         </div>
       </div>
