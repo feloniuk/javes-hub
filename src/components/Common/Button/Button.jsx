@@ -4,6 +4,8 @@ import s from './Button.module.scss';
 
 const Button = ({ 
   href, 
+  target,
+  rel,
   className, 
   children, 
   disabled 
@@ -11,6 +13,8 @@ const Button = ({
   return (
     <Link 
       href={href}
+      target={target}
+      rel={rel}
       className={`${s[className]} ${disabled ? s.disabled : ''}`}
       role='button'
     >

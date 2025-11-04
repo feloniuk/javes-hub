@@ -55,9 +55,9 @@ const Profile = () => {
             className='buttonCard'
             disabled
           >
-            Join as a PRO-Player now
+            Create your PROfile
           </Button>
-          <span className={s.tempText}>Sign-ups start on soon</span>
+          <span className={s.tempText}>Coming soon</span>
         </div>
       </div>
     </section>

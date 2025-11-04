@@ -90,8 +90,8 @@ const Hero = () => {
 
         <div className={s.buttonsWrapper}>
           <div ref={joinBtnRef} className={s.btnWrapper}>
-            <Button href='/' className='buttonHero' disabled>Join as a PRO-Player</Button>
-            <span className={s.tempText}>Sign-ups start on June 26</span>
+            <Button href='https://javes-pro.notion.site/application' rel="noopener noreferrer" target="_blank" className='buttonHero' >Join as a PRO-Player</Button>
+            {/* <span className={s.tempText}>Sign-ups start on June 26</span> */}
           </div>
 
           {/* <Link
