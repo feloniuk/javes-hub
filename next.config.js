@@ -14,6 +14,12 @@ const nextConfig = {
           port: '',
           pathname: '/media/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'mmonster.co',
+          port: '',
+          pathname: '/media/**',
+        },
       ],
     },
   }
